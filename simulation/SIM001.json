@@ -1,0 +1,220 @@
+{
+  "simulation_id": "SIM001",
+  "timestamp": "2026-10-10T05:44:10+00:00",
+  "map_id": "map_medium_1000m",
+  "scenario_id": "SC005",
+  "od": {
+    "departure": "walk:87",
+    "arrival": "walk:21"
+  },
+  "profile": {
+    "walking_speed_mps": 0.9,
+    "walking_ability_g_max": 0.6,
+    "arrival_weight_w_t": 0.9,
+    "walking_motivation_w_e": 0.1,
+    "effort_direction_s": 1
+  },
+  "time_constraint": {
+    "type": "hard",
+    "t_max_budget_sec": 1500,
+    "delay_penalty_lambda": null
+  },
+  "depart_time_sec": 28800.0,
+  "allowed_modes": [
+    "walk",
+    "taxi",
+    "bus"
+  ],
+  "od_seed": 20261010,
+  "feasible": true,
+  "removed_walk_edges": 0,
+  "result": {
+    "pareto_front": [
+      {
+        "solution_id": 5,
+        "f1_sec": 657.4306096976351,
+        "f2": 94.79812894620174,
+        "d_sec": 0.0,
+        "u": 0.07806081324518974,
+        "rank": 1,
+        "path": [
+          "walk:87",
+          "dummy:bus:1",
+          "bus:1",
+          "bus:2",
+          "dummy:bus:2",
+          "walk:14",
+          "walk:56",
+          "walk:33",
+          "walk:76",
+          "walk:47",
+          "walk:43",
+          "walk:96",
+          "walk:21"
+        ]
+      },
+      {
+        "solution_id": 0,
+        "f1_sec": 612.697621441778,
+        "f2": 124.83918152328957,
+        "d_sec": 0.0,
+        "u": 0.1,
+        "rank": 2,
+        "path": [
+          "walk:87",
+          "dummy:bus:1",
+          "bus:1",
+          "bus:2",
+          "dummy:bus:2",
+          "walk:14",
+          "walk:56",
+          "walk:33",
+          "walk:10",
+          "walk:71",
+          "walk:96",
+          "walk:21"
+        ]
+      },
+      {
+        "solution_id": 4,
+        "f1_sec": 655.6309800254942,
+        "f2": 111.31352149051088,
+        "d_sec": 0.0,
+        "u": 0.1134088402047349,
+        "rank": 3,
+        "path": [
+          "walk:87",
+          "dummy:bus:1",
+          "bus:1",
+          "bus:2",
+          "dummy:bus:2",
+          "walk:14",
+          "walk:56",
+          "walk:33",
+          "walk:76",
+          "walk:47",
+          "walk:32",
+          "walk:96",
+          "walk:21"
+        ]
+      },
+      {
+        "solution_id": 2,
+        "f1_sec": 636.9232858825097,
+        "f2": 121.35462220787376,
+        "d_sec": 0.0,
+        "u": 0.11690466376564301,
+        "rank": 4,
+        "path": [
+          "walk:87",
+          "dummy:bus:1",
+          "bus:1",
+          "bus:2",
+          "dummy:bus:2",
+          "walk:14",
+          "walk:56",
+          "walk:33",
+          "walk:76",
+          "walk:47",
+          "walk:32",
+          "walk:21"
+        ]
+      },
+      {
+        "solution_id": 1,
+        "f1_sec": 636.4612916641859,
+        "f2": 122.17918876333958,
+        "d_sec": 0.0,
+        "u": 0.1182892821572949,
+        "rank": 5,
+        "path": [
+          "walk:87",
+          "dummy:bus:1",
+          "bus:1",
+          "bus:2",
+          "dummy:bus:2",
+          "walk:14",
+          "walk:56",
+          "walk:33",
+          "walk:76",
+          "walk:47",
+          "walk:43",
+          "walk:21"
+        ]
+      },
+      {
+        "solution_id": 3,
+        "f1_sec": 651.4258399234529,
+        "f2": 120.17995920686465,
+        "d_sec": 0.0,
+        "u": 0.12907656776750687,
+        "rank": 6,
+        "path": [
+          "walk:87",
+          "dummy:bus:1",
+          "bus:1",
+          "bus:2",
+          "dummy:bus:2",
+          "walk:14",
+          "walk:56",
+          "walk:33",
+          "walk:76",
+          "walk:47",
+          "walk:96",
+          "walk:21"
+        ]
+      },
+      {
+        "solution_id": 6,
+        "f1_sec": 1493.6086908616803,
+        "f2": 80.42703126920873,
+        "d_sec": 0.0,
+        "u": 0.9,
+        "rank": 7,
+        "path": [
+          "walk:87",
+          "dummy:bus:1",
+          "bus:1",
+          "bus:2",
+          "bus:3",
+          "dummy:bus:3",
+          "walk:89",
+          "walk:56",
+          "walk:33",
+          "walk:76",
+          "walk:47",
+          "walk:43",
+          "walk:96",
+          "walk:21"
+        ]
+      }
+    ],
+    "selected": 5,
+    "weighted_scalarization": {
+      "0.0": 6,
+      "0.05": 5,
+      "0.1": 5,
+      "0.15": 5,
+      "0.2": 5,
+      "0.25": 5,
+      "0.3": 5,
+      "0.35": 5,
+      "0.4": 5,
+      "0.45": 0,
+      "0.5": 0,
+      "0.55": 0,
+      "0.6": 0,
+      "0.65": 0,
+      "0.7": 0,
+      "0.75": 0,
+      "0.8": 0,
+      "0.85": 0,
+      "0.9": 0,
+      "0.95": 0,
+      "1.0": 0
+    }
+  },
+  "timing": {
+    "compute_sec": 0.0839
+  }
+}

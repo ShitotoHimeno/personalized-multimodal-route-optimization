@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "scenarios": [
+    {
+      "scenario_id": "SC001",
+      "name": "高齢者",
+      "description": "歩行能力が低く、到着時間の拘束が強い",
+      "profile": {
+        "walking_speed_mps": 0.8,
+        "walking_ability_g_max": 0.4,
+        "arrival_weight_w_t": 0.7,
+        "walking_motivation_w_e": 0.3,
+        "effort_direction_s": 1
+      },
+      "time_constraint": {
+        "type": "hard",
+        "t_max_budget_sec": 1800,
+        "delay_penalty_lambda": null
+      }
+    },
+    {
+      "scenario_id": "SC002",
+      "name": "運動重視",
+      "description": "歩行意欲が高く、時間に余裕がある",
+      "profile": {
+        "walking_speed_mps": 1.3,
+        "walking_ability_g_max": 0.9,
+        "arrival_weight_w_t": 0.2,
+        "walking_motivation_w_e": 0.8,
+        "effort_direction_s": -1
+      },
+      "time_constraint": {
+        "type": "soft",
+        "t_max_budget_sec": 5400,
+        "delay_penalty_lambda": 0.5
+      }
+    },
+    {
+      "scenario_id": "SC003",
+      "name": "通勤者",
+      "description": "到着重視度が高く、時間的余裕がない",
+      "profile": {
+        "walking_speed_mps": 1.4,
+        "walking_ability_g_max": 0.8,
+        "arrival_weight_w_t": 0.9,
+        "walking_motivation_w_e": 0.1,
+        "effort_direction_s": 1
+      },
+      "time_constraint": {
+        "type": "hard",
+        "t_max_budget_sec": 1200,
+        "delay_penalty_lambda": null
+      }
+    },
+    {
+      "scenario_id": "SC004",
+      "name": "歩行能力が高い利用者",
+      "description": "歩行可能制約がほとんど効かない場合の対照ケース",
+      "profile": {
+        "walking_speed_mps": 1.5,
+        "walking_ability_g_max": 1.0,
+        "arrival_weight_w_t": 0.5,
+        "walking_motivation_w_e": 0.5,
+        "effort_direction_s": 1
+      },
+      "time_constraint": {
+        "type": "soft",
+        "t_max_budget_sec": 3600,
+        "delay_penalty_lambda": 1.0
+      }
+    },
+    {
+      "scenario_id": "SC005",
+      "name": "病院通院",
+      "description": "受診時刻を厳守するため時間制約がハード制約、遅延不可",
+      "profile": {
+        "walking_speed_mps": 0.9,
+        "walking_ability_g_max": 0.6,
+        "arrival_weight_w_t": 0.9,
+        "walking_motivation_w_e": 0.1,
+        "effort_direction_s": 1
+      },
+      "time_constraint": {
+        "type": "hard",
+        "t_max_budget_sec": 1500,
+        "delay_penalty_lambda": null
+      }
+    },
+    {
+      "scenario_id": "SC006",
+      "name": "喫茶店での待ち合わせ",
+      "description": "時間制約がソフト制約、到着重視度が大きく遅延ペナルティが強く効く",
+      "profile": {
+        "walking_speed_mps": 1.2,
+        "walking_ability_g_max": 0.7,
+        "arrival_weight_w_t": 0.8,
+        "walking_motivation_w_e": 0.2,
+        "effort_direction_s": 1
+      },
+      "time_constraint": {
+        "type": "soft",
+        "t_max_budget_sec": 2400,
+        "delay_penalty_lambda": 2.0
+      }
+    },
+    {
+      "scenario_id": "SC007",
+      "name": "公園散歩",
+      "description": "時間制約がソフト制約、到着重視度が小さく遅延ペナルティがほぼ効かない（歩行意欲主導）",
+      "profile": {
+        "walking_speed_mps": 1.2,
+        "walking_ability_g_max": 1.0,
+        "arrival_weight_w_t": 0.2,
+        "walking_motivation_w_e": 0.8,
+        "effort_direction_s": -1
+      },
+      "time_constraint": {
+        "type": "soft",
+        "t_max_budget_sec": 7200,
+        "delay_penalty_lambda": 0.2
+      }
+    },
+    {
+      "scenario_id": "SC008",
+      "name": "到着時間指定なし",
+      "description": "時間制約を適用しない対照ケース（重み比較・解の差の検証用）",
+      "profile": {
+        "walking_speed_mps": 1.3,
+        "walking_ability_g_max": 0.8,
+        "arrival_weight_w_t": 0.5,
+        "walking_motivation_w_e": 0.5,
+        "effort_direction_s": 1
+      },
+      "time_constraint": {
+        "type": "none",
+        "t_max_budget_sec": null,
+        "delay_penalty_lambda": null
+      }
+    }
+  ]
+}

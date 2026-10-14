@@ -79,6 +79,7 @@ def _static_walk_labels(
     source: str,
     g_max: float,
     walk_speed_mps: float,
+    guard: Any | None = None,
 ) -> dict[str, list[Label]]:
     """徒歩網上の静的2基準ラベル（コスト, 負荷）を列挙する。"""
     labels: dict[str, list[Label]] = defaultdict(list)
@@ -87,6 +88,8 @@ def _static_walk_labels(
     heap: list[tuple[float, int, Label]] = [(0.0, 0, start)]
     counter = 0
     while heap:
+        if guard is not None:
+            guard.check("walk_labels")
         _, _, lbl = heapq.heappop(heap)
         if not any(x is lbl for x in labels[lbl.node]):
             continue
@@ -163,6 +166,7 @@ def find_pareto_solutions(
     t_max: float | None,
     time_type: str,
     allowed_modes: Iterable[str] = ("walk", "taxi", "bus"),
+    guard: Any | None = None,
 ) -> list[dict[str, Any]]:
     """パレート解群を導出する（分解法: 前方徒歩 -> 交通 -> 後方徒歩）。"""
     allowed = set(allowed_modes)
@@ -170,11 +174,11 @@ def find_pareto_solutions(
 
     # ① 前方徒歩ラベル（source -> 各徒歩ノード）
     Hf = _walk_subgraph(G, reverse=False)
-    F = _static_walk_labels(Hf, wnodes, source, g_max, walk_speed_mps)
+    F = _static_walk_labels(Hf, wnodes, source, g_max, walk_speed_mps, guard=guard)
 
     # ③ 後方徒歩ラベル（各徒歩ノード -> target）
     Hb = _walk_subgraph(G, reverse=True)
-    B = _static_walk_labels(Hb, wnodes, target, g_max, walk_speed_mps)
+    B = _static_walk_labels(Hb, wnodes, target, g_max, walk_speed_mps, guard=guard)
 
     candidates: list[tuple[float, float, tuple[str, ...]]] = []  # (f1, f2, path)
 
@@ -188,6 +192,8 @@ def find_pareto_solutions(
             continue
         alight_map = _alight_walk_nodes(G, mode)
         for u in wnodes:
+            if guard is not None:
+                guard.check("ride_combination")
             for fl in F[u]:
                 for _, dummy, attr in G.out_edges(u, data=True):
                     if attr.get("kind") != "board" or attr.get("mode") != mode:

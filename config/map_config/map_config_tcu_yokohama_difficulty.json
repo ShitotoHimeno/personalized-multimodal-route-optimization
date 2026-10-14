@@ -1,0 +1,83 @@
+{
+  "map_id": "map_tcu_yokohama_500m_difficulty",
+  "source": "osm",
+  "random_seed": 42,
+  "osm": {
+    "center": { "lat": 35.5613, "lon": 139.5759 },
+    "dist_m": 500,
+    "network_type": "walk",
+    "simplify": true,
+    "z_default": 0.0,
+    "description": "東京都市大学横浜キャンパス（牛久保西三丁目付近）を中心とした徒歩500m圏"
+  },
+  "coordinate": {
+    "type": "local_cartesian",
+    "unit": "meter",
+    "description": "OSM中心（東京都市大学横浜キャンパス）を原点とした局所直交座標（UTM→平行移動）",
+    "bounds": {
+      "x": { "min": -600, "max": 600 },
+      "y": { "min": -600, "max": 600 },
+      "z": { "min": 0, "max": 30 }
+    }
+  },
+  "nodes": {
+    "walk": { "source": "osm", "z_default": 0 },
+    "taxi": { "count": 8 },
+    "bus": { "count": 12 }
+  },
+  "edges": {
+    "directed": true,
+    "walk": {
+      "connect_radius": 120,
+      "isolation_fallback": true,
+      "distance_metric": "euclidean",
+      "difficulty": {
+        "calc": true,
+        "min": 0.0,
+        "max": 1.0,
+        "method": "slope_and_roughness",
+        "random_add": { "min": 0.0, "max": 0.5 },
+        "description": "徒歩エッジの困難度に 0〜0.5 をランダムに上乗せする"
+      }
+    },
+    "dummy": {
+      "connect": ["walk", "dummy"],
+      "co_located_only": true,
+      "enter_has_cost": true,
+      "exit_has_cost": false
+    },
+    "transit": {
+      "superpose_on": "walk",
+      "bus_route": "contiguous_walk_path",
+      "taxi_network": "superposed_subgraph"
+    }
+  },
+  "time_dependency": {
+    "taxi": {
+      "enabled": true,
+      "function": "taxi_arrival_time",
+      "type": "continuous",
+      "description": "乗車ダミーエッジの時間 = タクシーが現在地（同座標の徒歩ノード）へ来るまでの待ち時間",
+      "params": {
+        "wait_time_sec": { "min": 0, "max": 600 },
+        "speed_kmh": 30
+      }
+    },
+    "bus": {
+      "enabled": true,
+      "function": "bus_timetable",
+      "type": "timetable",
+      "description": "乗車ダミーエッジおよび運行エッジは時刻表に従い離散的な時刻ノードとして現れる",
+      "params": {
+        "headway_sec": 900,
+        "service_start_sec": 21600,
+        "service_end_sec": 79200,
+        "dwell_sec": 30
+      }
+    }
+  },
+  "time": {
+    "horizon_sec": 86400,
+    "step_sec": 60
+  }
+}

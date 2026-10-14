@@ -70,10 +70,19 @@ class MapGenerator:
         seed = config.get("random_seed", 0)
         self.rng = np.random.default_rng(seed)
 
-        b = config["coordinate"]["bounds"]
-        self.x_min, self.x_max = b["x"]["min"], b["x"]["max"]
-        self.y_min, self.y_max = b["y"]["min"], b["y"]["max"]
-        self.z_min, self.z_max = b["z"]["min"], b["z"]["max"]
+        # ノードの供給元: "random"（既定, 既存挙動）または "osm"（実地図）
+        self.source = config.get("source", "random")
+        self.osm_cfg = config.get("osm", {})
+
+        bounds = config.get("coordinate", {}).get("bounds")
+        if bounds:
+            b = bounds
+            self.x_min, self.x_max = b["x"]["min"], b["x"]["max"]
+            self.y_min, self.y_max = b["y"]["min"], b["y"]["max"]
+            self.z_min, self.z_max = b["z"]["min"], b["z"]["max"]
+        else:  # OSM ソースでは座標範囲を要しない
+            self.x_min = self.x_max = self.y_min = self.y_max = 0.0
+            self.z_min = self.z_max = 0.0
 
         self.walk_cfg = config["edges"]["walk"]
         self.dummy_cfg = config["edges"]["dummy"]
@@ -122,6 +131,31 @@ class MapGenerator:
         # バスノードは徒歩エッジ生成後に決定する（_add_bus_nodes）
         return nodes
 
+    def _generate_osm_nodes(
+        self,
+    ) -> tuple[dict[str, dict[str, Any]], list[tuple[str, str, float]]]:
+        """OpenStreetMap の歩行ネットワークから徒歩ノードを生成する（source="osm"）。
+
+        徒歩ノードは center を原点とした局所直交座標（メートル）を持つ。
+        タクシノード・ダミーノードは random ソースと同様に同座標で付加する。
+        """
+        from .osm_source import fetch_walk_network
+
+        nodes, edges = fetch_walk_network(self.osm_cfg)
+        walk_ids = list(nodes)
+
+        n_taxi = self.cfg["nodes"]["taxi"]["count"]
+        for i, host in enumerate(self._pick_hosts(walk_ids, n_taxi)):
+            pos = nodes[host]
+            nodes[f"taxi:{i}"] = {
+                "type": "taxi", "x": pos["x"], "y": pos["y"], "host": host,
+            }
+            nodes[f"dummy:taxi:{i}"] = {
+                "type": "dummy", "mode": "taxi", "x": pos["x"], "y": pos["y"], "host": host,
+            }
+
+        return nodes, edges
+
     def _pick_hosts(self, walk_ids: list[str], n: int) -> list[str]:
         """ランダムに n 個の徒歩ノードを選ぶ。"""
         picks = self.rng.choice(len(walk_ids), size=n, replace=False)
@@ -163,7 +197,7 @@ class MapGenerator:
         def _options(node: str, visited: set[str]) -> int:
             return sum(1 for v in _walk_nbr(G, node) if v in candidates and v not in visited)
 
-        n_starts = min(12, len(candidates))
+        n_starts = min(50, len(candidates))
         best: list[str] = []
         for s in [walk_ids[int(i)] for i in rng.choice(len(walk_ids), size=n_starts, replace=False)]:
             path = [s]
@@ -186,13 +220,47 @@ class MapGenerator:
                     break
             if len(path) > len(best):
                 best = path
-        return best[:n]
+        if len(best) >= n:
+            return best[:n]
+        # 複数経路を組み合わせて n 個に到達させる（複数路線相当）
+        selected = list(best)
+        used = set(selected)
+        # 残りを別経路から追加
+        remaining = n - len(selected)
+        tries = min(100, len(candidates))
+        for _ in range(tries):
+            if len(selected) >= n:
+                break
+            # 未使用ノードから開始
+            unused = [w for w in candidates if w not in used]
+            if not unused:
+                break
+            s = rng.choice(unused)
+            path = [s]
+            used.add(s)
+            extended = True
+            while extended and len(path) < remaining and len(selected) + len(path) < n:
+                extended = False
+                for end in (path[0], path[-1]):
+                    nbrs = _neighbors(end, used)
+                    if not nbrs:
+                        continue
+                    nxt = min(nbrs, key=lambda w: _options(w, used))
+                    if end is path[0]:
+                        path.insert(0, nxt)
+                    else:
+                        path.append(nxt)
+                    used.add(nxt)
+                    extended = True
+                    break
+            selected.extend(path)
+        return selected[:n]
 
     # ------------------------------------------------------------------
     # 困難度算出
     # ------------------------------------------------------------------
     def _difficulty(self, a: dict[str, Any], b: dict[str, Any]) -> float:
-        """徒歩ノード間の困難度を算出する（勾配 + 路面の粗さ）。"""
+        """徒歩ノード間の困難度を算出する（勾配 + 路面の粗さ + 任意のランダム増量）。"""
         diff_cfg = self.walk_cfg["difficulty"]
         if not diff_cfg.get("calc", False):
             return 0.0
@@ -207,7 +275,17 @@ class MapGenerator:
 
         raw = 0.6 * norm_grade + 0.4 * roughness
         dmin, dmax = diff_cfg["min"], diff_cfg["max"]
-        return float(dmin + (dmax - dmin) * raw)
+        d = float(dmin + (dmax - dmin) * raw)
+
+        # ランダムに困難度を上乗せする設定（difficulty.random_add）があれば加算する
+        random_add = diff_cfg.get("random_add")
+        if random_add and random_add.get("max", 0.0) > 0.0:
+            d += float(
+                self.rng.uniform(random_add.get("min", 0.0), random_add["max"])
+            )
+            d = min(d, dmax)
+
+        return d
 
     # ------------------------------------------------------------------
     # エッジ生成
@@ -271,6 +349,27 @@ class MapGenerator:
             )
             merged = comps[i] | comps[j]
             comps = [c for k, c in enumerate(comps) if k not in (i, j)] + [merged]
+
+    def _add_osm_walk_edges(
+        self,
+        G: nx.DiGraph,
+        nodes: dict,
+        edges: list[tuple[str, str, float]],
+    ) -> None:
+        """OSM の実歩行辺を徒歩エッジとして追加する（両方向・距離は OSM の length）。"""
+        for u, v, length in edges:
+            diff = self._difficulty(nodes[u], nodes[v])
+            G.add_edge(
+                u, v, kind="walk", mode="walk",
+                distance_m=float(length), difficulty=diff,
+                time_function="walk", travel_sec=None,
+            )
+            diff_rev = self._difficulty(nodes[v], nodes[u])
+            G.add_edge(
+                v, u, kind="walk", mode="walk",
+                distance_m=float(length), difficulty=diff_rev,
+                time_function="walk", travel_sec=None,
+            )
 
     def _add_dummy_and_access_edges(self, G: nx.DiGraph, nodes: dict) -> None:
         """乗車/降車/乗込/降車のエッジを生成する（同座標の徒歩ノードのみ接続, 決定 #19）。"""
@@ -400,17 +499,28 @@ class MapGenerator:
     # ------------------------------------------------------------------
     def build(self) -> nx.DiGraph:
         """ノードマップ（有向グラフ）を構築して返す。"""
-        nodes = self._generate_nodes()
         G = nx.DiGraph()
-        for nid, attr in nodes.items():
-            G.add_node(nid, **attr)
 
-        # 徒歩ネットワークを先に構築し（isolated 回避の接続も含む）、
-        # その上にバス路線・タクシー・ダミー接続を重ねる
-        self._add_walk_edges(G, nodes)
+        if self.source == "osm":
+            nodes, osm_edges = self._generate_osm_nodes()
+            for nid, attr in nodes.items():
+                G.add_node(nid, **attr)
+            self._add_osm_walk_edges(G, nodes, osm_edges)
+        else:
+            nodes = self._generate_nodes()
+            for nid, attr in nodes.items():
+                G.add_node(nid, **attr)
+            # 徒歩ネットワークを先に構築し（isolated 回避の接続も含む）、
+            # その上にバス路線・タクシー・ダミー接続を重ねる
+            self._add_walk_edges(G, nodes)
+
         self._add_bus_nodes(G, nodes)
         self._add_dummy_and_access_edges(G, nodes)
         self._add_transit_edges(G, nodes)
+        try:
+            _add_pois(G, nodes, self.cfg.get("pois"))
+        except Exception:
+            pass
 
         G.graph["map_id"] = self.cfg.get("map_id")
         G.graph["config"] = self.cfg
@@ -483,3 +593,18 @@ def summary(G: nx.DiGraph) -> dict[str, int]:
     for _, _, attr in G.edges(data=True):
         edge_counts[attr["kind"]] = edge_counts.get(attr["kind"], 0) + 1
     return {"nodes": node_counts, "edges": edge_counts}
+def _add_pois(G: nx.DiGraph, nodes: dict, pois_cfg: dict[str, Any] | None = None) -> None:
+    """歩行ノードにPOI属性を付与する。"""
+    if not pois_cfg:
+        return
+    mapping = pois_cfg.get("mapping", {})
+    if not mapping:
+        return
+    for role, idx in mapping.items():
+        try:
+            wid = f"walk:{int(idx)}"
+        except (ValueError, TypeError):
+            continue
+        if wid in nodes:
+            nodes[wid]["role"] = role
+            G.nodes[wid]["role"] = role

@@ -7,6 +7,7 @@ makemap / plan_route / scoring / visualize を組み合わせて 1 回のシミ�
 from __future__ import annotations
 
 import json
+import pickle
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -17,6 +18,7 @@ import numpy as np
 from src.makemap import build_map
 from src.plan_route import find_pareto_solutions, weighted_scalarization
 from src.scoring import score_solutions, select_recommended
+from src.util import ResourceGuard, check_capacity, total_memory_bytes
 from src.visualize import plot_node_map, plot_pareto_front
 
 _DEFAULT_CONFIG = "config/map_config/map_config.json"
@@ -61,18 +63,42 @@ def run_simulation(
     config_path: str | Path = _DEFAULT_CONFIG,
     scenario_path: str | Path = _DEFAULT_SCENARIOS,
     scenario_id: str = "SC005",
+    manual_graph: Any | None = None,
     depart_time: float = 28800.0,
     od_seed: int = _OD_SEED,
     allowed_modes: Iterable[str] = ("walk", "taxi", "bus"),
     output_dir: str | Path = _DEFAULT_OUTPUT,
     figure_dir: str | Path = _DEFAULT_FIGURES,
+    capacity_check: bool = True,
+    time_budget_sec: float | None = None,
+    mem_fraction_limit: float = 0.8,
+    force: bool = False,
 ) -> dict[str, Any]:
     """シミュレーションを 1 回実行してログを返す。"""
     t0 = time.perf_counter()
 
     # 1. 環境情報（ノードマップ）
-    G = build_map(config_path)
+    if manual_graph is not None:
+        G = manual_graph
+    else:
+        G = build_map(config_path)
     map_id = G.graph["map_id"]
+
+    # 1.5 計算能力の事前見積り（不足なら早期に中断/警告する）
+    capacity = None
+    guard = None
+    if capacity_check:
+        capacity = check_capacity(
+            G,
+            time_budget_sec=time_budget_sec,
+            mem_fraction_limit=mem_fraction_limit,
+            force=force,
+        )
+        mem_limit = int(total_memory_bytes() * mem_fraction_limit) or None
+        guard = ResourceGuard(
+            time_budget_sec=time_budget_sec,
+            memory_limit_bytes=mem_limit,
+        )
 
     # 2. 個人・オーダー情報（シナリオ）
     scenarios = _load_json(scenario_path)["scenarios"]
@@ -98,6 +124,7 @@ def run_simulation(
         t_max=tc.get("t_max_budget_sec"),
         time_type=tc["type"],
         allowed_modes=allowed_modes,
+        guard=guard,
     )
     feasible = len(solutions) > 0
 
@@ -133,6 +160,18 @@ def run_simulation(
         "depart_time_sec": depart_time,
         "allowed_modes": list(allowed_modes),
         "od_seed": od_seed,
+        "capacity": (
+            {
+                "level": capacity.level,
+                "estimated_labels": capacity.estimated_labels,
+                "estimated_memory_mb": round(capacity.estimated_memory_bytes / 1e6, 2),
+                "estimated_sec": round(capacity.estimated_seconds, 2),
+                "dominant_factor": capacity.dominant_factor,
+                "messages": capacity.messages,
+            }
+            if capacity is not None
+            else None
+        ),
         "feasible": feasible,
         "removed_walk_edges": removed_walk_edges,
         "result": {

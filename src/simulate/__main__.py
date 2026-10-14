@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import argparse
+import sys
 
 from .simulate import run_simulation
+from src.util import InsufficientResourcesError
 
 
 def main() -> None:
@@ -16,17 +18,64 @@ def main() -> None:
     p.add_argument("--scenarios", default="config/scenarios/scenarios.json")
     p.add_argument("--output", default="simulation")
     p.add_argument("--figures", default="data/figures")
+    p.add_argument(
+        "--no-capacity-check",
+        action="store_true",
+        help="計算能力の事前見積り・実行中監視を無効化する",
+    )
+    p.add_argument(
+        "--time-budget",
+        type=float,
+        default=None,
+        help="許容する計算時間 [秒]。見積り/実行がこれを超えそうなら早期に中断する",
+    )
+    p.add_argument(
+        "--mem-fraction",
+        type=float,
+        default=0.8,
+        help="メモリ上限の割合（総メモリに対する割合, 既定 0.8）",
+    )
+    p.add_argument(
+        "--force",
+        action="store_true",
+        help="事前見積りで critical でも中断せず実行する",
+    )
+    p.add_argument(
+        "--manual-graph",
+        default=None,
+        help="手動作成したグラフ（pickle）を読み込む",
+    )
     argv = p.parse_args()
 
-    log = run_simulation(
-        config_path=argv.config,
-        scenario_path=argv.scenarios,
-        scenario_id=argv.scenario,
-        depart_time=argv.depart,
-        od_seed=argv.od_seed,
-        output_dir=argv.output,
-        figure_dir=argv.figures,
-    )
+    mg = None
+    if argv.manual_graph:
+        import pickle
+        from pathlib import Path
+        with open(argv.manual_graph, "rb") as f:
+            mg = pickle.load(f)
+
+    try:
+        log = run_simulation(
+            config_path=argv.config,
+            scenario_path=argv.scenarios,
+            scenario_id=argv.scenario,
+            depart_time=argv.depart,
+            od_seed=argv.od_seed,
+            output_dir=argv.output,
+            figure_dir=argv.figures,
+            capacity_check=not argv.no_capacity_check,
+            time_budget_sec=argv.time_budget,
+            mem_fraction_limit=argv.mem_fraction,
+            force=argv.force,
+            manual_graph=mg,
+        )
+    except InsufficientResourcesError as e:
+        print(f"[error] {e}", file=sys.stderr)
+        print(
+            "ヒント: --force で強制実行 / --time-budget・--mem-fraction で上限を調整",
+            file=sys.stderr,
+        )
+        raise SystemExit(2)
     selected = log["result"]["selected"]
     print(
         f"{log['simulation_id']}: {log['scenario_id']} "

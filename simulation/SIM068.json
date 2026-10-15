@@ -1,0 +1,118 @@
+{
+  "simulation_id": "SIM068",
+  "timestamp": "2026-10-15T05:45:43+00:00",
+  "map_id": "map_sketch_1000m_ext10",
+  "scenario_id": "SC006",
+  "od": {
+    "departure": "walk:10",
+    "arrival": "walk:11"
+  },
+  "profile": {
+    "walking_speed_mps": 1.2,
+    "walking_ability_g_max": 0.7,
+    "arrival_weight_w_t": 0.8,
+    "walking_motivation_w_e": 0.2,
+    "effort_direction_s": 1
+  },
+  "time_constraint": {
+    "type": "soft",
+    "t_max_budget_sec": 2400,
+    "delay_penalty_lambda": 2.0
+  },
+  "depart_time_sec": 28800.0,
+  "allowed_modes": [
+    "walk",
+    "taxi",
+    "bus"
+  ],
+  "od_seed": 1,
+  "capacity": null,
+  "feasible": true,
+  "removed_walk_edges": 34,
+  "result": {
+    "pareto_front": [
+      {
+        "solution_id": 0,
+        "f1_sec": 610.4793319728245,
+        "f2": 158.43978339216858,
+        "d_sec": 0.0,
+        "u": 0.2,
+        "rank": 1,
+        "path": [
+          "walk:10",
+          "dummy:taxi:9",
+          "taxi:9",
+          "taxi:6",
+          "taxi:10",
+          "dummy:taxi:10",
+          "walk:12",
+          "walk:11"
+        ]
+      },
+      {
+        "solution_id": 2,
+        "f1_sec": 660.468629689461,
+        "f2": 111.7591631417337,
+        "d_sec": 0.0,
+        "u": 0.8,
+        "rank": 2,
+        "path": [
+          "walk:10",
+          "dummy:taxi:9",
+          "taxi:9",
+          "taxi:6",
+          "dummy:taxi:6",
+          "walk:7",
+          "walk:22",
+          "walk:11"
+        ]
+      },
+      {
+        "solution_id": 1,
+        "f1_sec": 659.5778937638236,
+        "f2": 151.97783402949239,
+        "d_sec": 0.0,
+        "u": 0.9580593835088099,
+        "rank": 3,
+        "path": [
+          "walk:10",
+          "dummy:taxi:9",
+          "taxi:9",
+          "taxi:6",
+          "taxi:5",
+          "dummy:taxi:5",
+          "walk:6",
+          "walk:22",
+          "walk:11"
+        ]
+      }
+    ],
+    "selected": 0,
+    "weighted_scalarization": {
+      "0.0": 2,
+      "0.05": 2,
+      "0.1": 2,
+      "0.15": 2,
+      "0.2": 2,
+      "0.25": 2,
+      "0.3": 2,
+      "0.35": 2,
+      "0.4": 2,
+      "0.45": 2,
+      "0.5": 0,
+      "0.55": 0,
+      "0.6": 0,
+      "0.65": 0,
+      "0.7": 0,
+      "0.75": 0,
+      "0.8": 0,
+      "0.85": 0,
+      "0.9": 0,
+      "0.95": 0,
+      "1.0": 0
+    }
+  },
+  "timing": {
+    "compute_sec": 0.0344
+  }
+}

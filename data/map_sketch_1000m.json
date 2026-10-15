@@ -1,0 +1,2049 @@
+{
+  "map_id": "map_sketch_1000m",
+  "nodes": [
+    {
+      "id": "walk:0",
+      "type": "walk",
+      "x": 265.8171448939583,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "id": "walk:1",
+      "type": "walk",
+      "x": 558.2783817501337,
+      "y": 162.86315133577384,
+      "z": 0.0
+    },
+    {
+      "id": "walk:2",
+      "type": "walk",
+      "x": 0.0,
+      "y": 196.04330555339203,
+      "z": 0.0
+    },
+    {
+      "id": "walk:3",
+      "type": "walk",
+      "x": 863.8388878987703,
+      "y": 204.2215125788613,
+      "z": 0.0
+    },
+    {
+      "id": "walk:4",
+      "type": "walk",
+      "x": 543.3968989484939,
+      "y": 386.3229223459771,
+      "z": 0.0
+    },
+    {
+      "id": "walk:5",
+      "type": "walk",
+      "x": 30.83229370878632,
+      "y": 467.3261157411014,
+      "z": 0.0
+    },
+    {
+      "id": "walk:6",
+      "type": "walk",
+      "x": 122.08162537872033,
+      "y": 597.3985512890413,
+      "z": 0.0
+    },
+    {
+      "id": "walk:7",
+      "type": "walk",
+      "x": 455.3555515950811,
+      "y": 612.9760884804112,
+      "z": 0.0
+    },
+    {
+      "id": "walk:8",
+      "type": "walk",
+      "x": 1000.0,
+      "y": 644.7542643508062,
+      "z": 0.0
+    },
+    {
+      "id": "walk:9",
+      "type": "walk",
+      "x": 980.2174300481198,
+      "y": 885.9724277591714,
+      "z": 0.0
+    },
+    {
+      "id": "walk:10",
+      "type": "walk",
+      "x": 46.24844056317945,
+      "y": 901.0047511488434,
+      "z": 0.0
+    },
+    {
+      "id": "walk:11",
+      "type": "walk",
+      "x": 377.6510425949029,
+      "y": 927.3307890022588,
+      "z": 0.0
+    },
+    {
+      "id": "walk:12",
+      "type": "walk",
+      "x": 713.776510425949,
+      "y": 1000.0,
+      "z": 0.0
+    },
+    {
+      "id": "taxi:0",
+      "type": "taxi",
+      "x": 265.8171448939583,
+      "y": 0.0,
+      "host": "walk:0"
+    },
+    {
+      "id": "dummy:taxi:0",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 265.8171448939583,
+      "y": 0.0,
+      "host": "walk:0"
+    },
+    {
+      "id": "taxi:1",
+      "type": "taxi",
+      "x": 558.2783817501337,
+      "y": 162.86315133577384,
+      "host": "walk:1"
+    },
+    {
+      "id": "dummy:taxi:1",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 558.2783817501337,
+      "y": 162.86315133577384,
+      "host": "walk:1"
+    },
+    {
+      "id": "taxi:2",
+      "type": "taxi",
+      "x": 863.8388878987703,
+      "y": 204.2215125788613,
+      "host": "walk:3"
+    },
+    {
+      "id": "dummy:taxi:2",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 863.8388878987703,
+      "y": 204.2215125788613,
+      "host": "walk:3"
+    },
+    {
+      "id": "taxi:3",
+      "type": "taxi",
+      "x": 543.3968989484939,
+      "y": 386.3229223459771,
+      "host": "walk:4"
+    },
+    {
+      "id": "dummy:taxi:3",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 543.3968989484939,
+      "y": 386.3229223459771,
+      "host": "walk:4"
+    },
+    {
+      "id": "taxi:4",
+      "type": "taxi",
+      "x": 30.83229370878632,
+      "y": 467.3261157411014,
+      "host": "walk:5"
+    },
+    {
+      "id": "dummy:taxi:4",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 30.83229370878632,
+      "y": 467.3261157411014,
+      "host": "walk:5"
+    },
+    {
+      "id": "taxi:5",
+      "type": "taxi",
+      "x": 122.08162537872033,
+      "y": 597.3985512890413,
+      "host": "walk:6"
+    },
+    {
+      "id": "dummy:taxi:5",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 122.08162537872033,
+      "y": 597.3985512890413,
+      "host": "walk:6"
+    },
+    {
+      "id": "taxi:6",
+      "type": "taxi",
+      "x": 455.3555515950811,
+      "y": 612.9760884804112,
+      "host": "walk:7"
+    },
+    {
+      "id": "dummy:taxi:6",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 455.3555515950811,
+      "y": 612.9760884804112,
+      "host": "walk:7"
+    },
+    {
+      "id": "taxi:7",
+      "type": "taxi",
+      "x": 1000.0,
+      "y": 644.7542643508062,
+      "host": "walk:8"
+    },
+    {
+      "id": "dummy:taxi:7",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 1000.0,
+      "y": 644.7542643508062,
+      "host": "walk:8"
+    },
+    {
+      "id": "taxi:8",
+      "type": "taxi",
+      "x": 980.2174300481198,
+      "y": 885.9724277591714,
+      "host": "walk:9"
+    },
+    {
+      "id": "dummy:taxi:8",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 980.2174300481198,
+      "y": 885.9724277591714,
+      "host": "walk:9"
+    },
+    {
+      "id": "taxi:9",
+      "type": "taxi",
+      "x": 46.24844056317945,
+      "y": 901.0047511488434,
+      "host": "walk:10"
+    },
+    {
+      "id": "dummy:taxi:9",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 46.24844056317945,
+      "y": 901.0047511488434,
+      "host": "walk:10"
+    },
+    {
+      "id": "taxi:10",
+      "type": "taxi",
+      "x": 713.776510425949,
+      "y": 1000.0,
+      "host": "walk:12"
+    },
+    {
+      "id": "dummy:taxi:10",
+      "type": "dummy",
+      "mode": "taxi",
+      "x": 713.776510425949,
+      "y": 1000.0,
+      "host": "walk:12"
+    },
+    {
+      "id": "bus:0",
+      "type": "bus",
+      "x": 558.2783817501337,
+      "y": 162.86315133577384,
+      "host": "walk:1"
+    },
+    {
+      "id": "dummy:bus:0",
+      "type": "dummy",
+      "mode": "bus",
+      "x": 558.2783817501337,
+      "y": 162.86315133577384,
+      "host": "walk:1"
+    },
+    {
+      "id": "bus:1",
+      "type": "bus",
+      "x": 30.83229370878632,
+      "y": 467.3261157411014,
+      "host": "walk:5"
+    },
+    {
+      "id": "dummy:bus:1",
+      "type": "dummy",
+      "mode": "bus",
+      "x": 30.83229370878632,
+      "y": 467.3261157411014,
+      "host": "walk:5"
+    },
+    {
+      "id": "bus:2",
+      "type": "bus",
+      "x": 122.08162537872033,
+      "y": 597.3985512890413,
+      "host": "walk:6"
+    },
+    {
+      "id": "dummy:bus:2",
+      "type": "dummy",
+      "mode": "bus",
+      "x": 122.08162537872033,
+      "y": 597.3985512890413,
+      "host": "walk:6"
+    },
+    {
+      "id": "bus:3",
+      "type": "bus",
+      "x": 455.3555515950811,
+      "y": 612.9760884804112,
+      "host": "walk:7"
+    },
+    {
+      "id": "dummy:bus:3",
+      "type": "dummy",
+      "mode": "bus",
+      "x": 455.3555515950811,
+      "y": 612.9760884804112,
+      "host": "walk:7"
+    },
+    {
+      "id": "bus:4",
+      "type": "bus",
+      "x": 1000.0,
+      "y": 644.7542643508062,
+      "host": "walk:8"
+    },
+    {
+      "id": "dummy:bus:4",
+      "type": "dummy",
+      "mode": "bus",
+      "x": 1000.0,
+      "y": 644.7542643508062,
+      "host": "walk:8"
+    },
+    {
+      "id": "bus:5",
+      "type": "bus",
+      "x": 713.776510425949,
+      "y": 1000.0,
+      "host": "walk:12"
+    },
+    {
+      "id": "dummy:bus:5",
+      "type": "dummy",
+      "mode": "bus",
+      "x": 713.776510425949,
+      "y": 1000.0,
+      "host": "walk:12"
+    }
+  ],
+  "edges": [
+    {
+      "from": "walk:0",
+      "to": "walk:2",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 330.2903755362488,
+      "difficulty": 0.3247117178139153,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:0",
+      "to": "walk:7",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 641.6108576571512,
+      "difficulty": 0.13280357075882324,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:0",
+      "to": "dummy:taxi:0",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:0",
+      "host": "walk:0",
+      "wait_time_sec": 511.930240193908,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:1",
+      "to": "walk:2",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 559.2635104880819,
+      "difficulty": 0.10362182216715823,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:1",
+      "to": "walk:5",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 609.0131956572045,
+      "difficulty": 0.7120710250762585,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:1",
+      "to": "walk:3",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 308.346780366724,
+      "difficulty": 0.11744801938748291,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:1",
+      "to": "walk:8",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 653.710205543823,
+      "difficulty": 0.7922916575163111,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:1",
+      "to": "dummy:taxi:1",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:1",
+      "host": "walk:1",
+      "wait_time_sec": 254.02831420401046,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:1",
+      "to": "dummy:bus:0",
+      "kind": "board",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "transit_node": "bus:0",
+      "host": "walk:1",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:2",
+      "to": "walk:0",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 330.2903755362488,
+      "difficulty": 0.3247117178139153,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:2",
+      "to": "walk:5",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 273.02929044094446,
+      "difficulty": 0.5700162700188733,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:2",
+      "to": "walk:1",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 559.2635104880819,
+      "difficulty": 0.10362182216715823,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:3",
+      "to": "walk:1",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 308.346780366724,
+      "difficulty": 0.11744801938748291,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:3",
+      "to": "walk:7",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 577.8745013913045,
+      "difficulty": 0.8078939112643972,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:3",
+      "to": "walk:11",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 871.3585063398342,
+      "difficulty": 0.7995335349904926,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:3",
+      "to": "dummy:taxi:2",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:2",
+      "host": "walk:3",
+      "wait_time_sec": 159.335297092578,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:4",
+      "to": "walk:5",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 518.9258057610406,
+      "difficulty": 0.43022357843867143,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:4",
+      "to": "walk:7",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 243.15208525235334,
+      "difficulty": 0.7381586867298691,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:4",
+      "to": "walk:8",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 524.6647981523716,
+      "difficulty": 0.12866851275266297,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:4",
+      "to": "dummy:taxi:3",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:3",
+      "host": "walk:4",
+      "wait_time_sec": 340.2938252569856,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:5",
+      "to": "walk:2",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 273.02929044094446,
+      "difficulty": 0.5700162700188733,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:5",
+      "to": "walk:6",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 158.88763016541785,
+      "difficulty": 0.47991913513720375,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:5",
+      "to": "walk:4",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 518.9258057610406,
+      "difficulty": 0.43022357843867143,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:5",
+      "to": "walk:1",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 609.0131956572045,
+      "difficulty": 0.7120710250762585,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:5",
+      "to": "dummy:taxi:4",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:4",
+      "host": "walk:5",
+      "wait_time_sec": 534.2303226625822,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:5",
+      "to": "dummy:bus:1",
+      "kind": "board",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "transit_node": "bus:1",
+      "host": "walk:5",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:6",
+      "to": "walk:5",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 158.88763016541785,
+      "difficulty": 0.47991913513720375,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:6",
+      "to": "walk:7",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 333.63778197412955,
+      "difficulty": 0.8336393378668613,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:6",
+      "to": "walk:10",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 312.9335336977776,
+      "difficulty": 0.5073367229962804,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:6",
+      "to": "dummy:taxi:5",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:5",
+      "host": "walk:6",
+      "wait_time_sec": 402.9633870796471,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:6",
+      "to": "dummy:bus:2",
+      "kind": "board",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "transit_node": "bus:2",
+      "host": "walk:6",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:7",
+      "to": "walk:3",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 577.8745013913045,
+      "difficulty": 0.8078939112643972,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:7",
+      "to": "walk:4",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 243.15208525235334,
+      "difficulty": 0.7381586867298691,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:7",
+      "to": "walk:6",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 333.63778197412955,
+      "difficulty": 0.8336393378668613,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:7",
+      "to": "walk:10",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 500.32903055432854,
+      "difficulty": 0.566495354179075,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:7",
+      "to": "walk:12",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 465.3696380845957,
+      "difficulty": 0.6305711788290688,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:7",
+      "to": "walk:9",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 591.6138882014657,
+      "difficulty": 0.28791594924347896,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:7",
+      "to": "walk:0",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 641.6108576571512,
+      "difficulty": 0.13280357075882324,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:7",
+      "to": "dummy:taxi:6",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:6",
+      "host": "walk:7",
+      "wait_time_sec": 526.5588881378204,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:7",
+      "to": "dummy:bus:3",
+      "kind": "board",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "transit_node": "bus:3",
+      "host": "walk:7",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:8",
+      "to": "walk:9",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 242.0279992728234,
+      "difficulty": 0.503809335418842,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:8",
+      "to": "walk:12",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 456.20545665399897,
+      "difficulty": 0.7392167735481449,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:8",
+      "to": "walk:4",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 524.6647981523716,
+      "difficulty": 0.12866851275266297,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:8",
+      "to": "walk:1",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 653.710205543823,
+      "difficulty": 0.7922916575163111,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:8",
+      "to": "dummy:taxi:7",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:7",
+      "host": "walk:8",
+      "wait_time_sec": 595.9979403843284,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:8",
+      "to": "dummy:bus:4",
+      "kind": "board",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "transit_node": "bus:4",
+      "host": "walk:8",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:9",
+      "to": "walk:7",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 591.6138882014657,
+      "difficulty": 0.28791594924347896,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:9",
+      "to": "walk:12",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 289.8155463053103,
+      "difficulty": 0.3842949934590484,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:9",
+      "to": "walk:8",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 242.0279992728234,
+      "difficulty": 0.503809335418842,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:9",
+      "to": "dummy:taxi:8",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:8",
+      "host": "walk:9",
+      "wait_time_sec": 287.39004672442456,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:10",
+      "to": "walk:7",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 500.32903055432854,
+      "difficulty": 0.566495354179075,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:10",
+      "to": "walk:11",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 332.44660458855094,
+      "difficulty": 0.8242325890929268,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:10",
+      "to": "walk:6",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 312.9335336977776,
+      "difficulty": 0.5073367229962804,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:10",
+      "to": "dummy:taxi:9",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:9",
+      "host": "walk:10",
+      "wait_time_sec": 208.01950759117454,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:11",
+      "to": "walk:3",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 871.3585063398342,
+      "difficulty": 0.7995335349904926,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:11",
+      "to": "walk:10",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 332.44660458855094,
+      "difficulty": 0.8242325890929268,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:11",
+      "to": "walk:12",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 343.891180973973,
+      "difficulty": 0.4607265093086522,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:12",
+      "to": "walk:11",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 343.891180973973,
+      "difficulty": 0.4607265093086522,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:12",
+      "to": "walk:7",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 465.3696380845957,
+      "difficulty": 0.6305711788290688,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:12",
+      "to": "walk:9",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 289.8155463053103,
+      "difficulty": 0.3842949934590484,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:12",
+      "to": "walk:8",
+      "kind": "walk",
+      "mode": "walk",
+      "distance_m": 456.20545665399897,
+      "difficulty": 0.7392167735481449,
+      "time_function": "walk",
+      "travel_sec": null
+    },
+    {
+      "from": "walk:12",
+      "to": "dummy:taxi:10",
+      "kind": "board",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "taxi_arrival_time",
+      "transit_node": "taxi:10",
+      "host": "walk:12",
+      "wait_time_sec": 420.55017824301797,
+      "speed_kmh": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "walk:12",
+      "to": "dummy:bus:5",
+      "kind": "board",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "transit_node": "bus:5",
+      "host": "walk:12",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:0",
+      "to": "dummy:taxi:0",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:0",
+      "to": "taxi:6",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 641.6108576571512,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 76.99330291885813
+    },
+    {
+      "from": "dummy:taxi:0",
+      "to": "walk:0",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:0",
+      "to": "taxi:0",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:1",
+      "to": "dummy:taxi:1",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:1",
+      "to": "taxi:4",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 609.0131956572045,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 73.08158347886453
+    },
+    {
+      "from": "taxi:1",
+      "to": "taxi:7",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 653.710205543823,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 78.44522466525875
+    },
+    {
+      "from": "taxi:1",
+      "to": "taxi:2",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 308.346780366724,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 37.00161364400687
+    },
+    {
+      "from": "dummy:taxi:1",
+      "to": "walk:1",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:1",
+      "to": "taxi:1",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:2",
+      "to": "dummy:taxi:2",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:2",
+      "to": "taxi:1",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 308.346780366724,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 37.00161364400687
+    },
+    {
+      "from": "taxi:2",
+      "to": "taxi:6",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 577.8745013913045,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 69.34494016695653
+    },
+    {
+      "from": "dummy:taxi:2",
+      "to": "walk:3",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:2",
+      "to": "taxi:2",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:3",
+      "to": "dummy:taxi:3",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:3",
+      "to": "taxi:4",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 518.9258057610406,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 62.271096691324864
+    },
+    {
+      "from": "taxi:3",
+      "to": "taxi:6",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 243.15208525235334,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 29.178250230282398
+    },
+    {
+      "from": "taxi:3",
+      "to": "taxi:7",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 524.6647981523716,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 62.959775778284595
+    },
+    {
+      "from": "dummy:taxi:3",
+      "to": "walk:4",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:3",
+      "to": "taxi:3",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:4",
+      "to": "dummy:taxi:4",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:4",
+      "to": "taxi:1",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 609.0131956572045,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 73.08158347886453
+    },
+    {
+      "from": "taxi:4",
+      "to": "taxi:3",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 518.9258057610406,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 62.271096691324864
+    },
+    {
+      "from": "taxi:4",
+      "to": "taxi:5",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 158.88763016541785,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 19.06651561985014
+    },
+    {
+      "from": "dummy:taxi:4",
+      "to": "walk:5",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:4",
+      "to": "taxi:4",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:5",
+      "to": "dummy:taxi:5",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:5",
+      "to": "taxi:4",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 158.88763016541785,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 19.06651561985014
+    },
+    {
+      "from": "taxi:5",
+      "to": "taxi:6",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 333.63778197412955,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 40.03653383689554
+    },
+    {
+      "from": "dummy:taxi:5",
+      "to": "walk:6",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:5",
+      "to": "taxi:5",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:6",
+      "to": "dummy:taxi:6",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:6",
+      "to": "taxi:5",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 333.63778197412955,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 40.03653383689554
+    },
+    {
+      "from": "taxi:6",
+      "to": "taxi:3",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 243.15208525235334,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 29.178250230282398
+    },
+    {
+      "from": "taxi:6",
+      "to": "taxi:10",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 465.3696380845957,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 55.844356570151476
+    },
+    {
+      "from": "taxi:6",
+      "to": "taxi:2",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 577.8745013913045,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 69.34494016695653
+    },
+    {
+      "from": "taxi:6",
+      "to": "taxi:8",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 591.6138882014657,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 70.99366658417587
+    },
+    {
+      "from": "taxi:6",
+      "to": "taxi:0",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 641.6108576571512,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 76.99330291885813
+    },
+    {
+      "from": "taxi:6",
+      "to": "taxi:9",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 500.32903055432854,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 60.03948366651942
+    },
+    {
+      "from": "dummy:taxi:6",
+      "to": "walk:7",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:6",
+      "to": "taxi:6",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:7",
+      "to": "dummy:taxi:7",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:7",
+      "to": "taxi:10",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 456.20545665399897,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 54.74465479847987
+    },
+    {
+      "from": "taxi:7",
+      "to": "taxi:3",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 524.6647981523716,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 62.959775778284595
+    },
+    {
+      "from": "taxi:7",
+      "to": "taxi:1",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 653.710205543823,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 78.44522466525875
+    },
+    {
+      "from": "dummy:taxi:7",
+      "to": "walk:8",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:7",
+      "to": "taxi:7",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:8",
+      "to": "dummy:taxi:8",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:8",
+      "to": "taxi:6",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 591.6138882014657,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 70.99366658417587
+    },
+    {
+      "from": "dummy:taxi:8",
+      "to": "walk:9",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:8",
+      "to": "taxi:8",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:9",
+      "to": "dummy:taxi:9",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:9",
+      "to": "taxi:6",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 500.32903055432854,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 60.03948366651942
+    },
+    {
+      "from": "dummy:taxi:9",
+      "to": "walk:10",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:9",
+      "to": "taxi:9",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:10",
+      "to": "dummy:taxi:10",
+      "kind": "exit",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "taxi:10",
+      "to": "taxi:6",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 465.3696380845957,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 55.844356570151476
+    },
+    {
+      "from": "taxi:10",
+      "to": "taxi:7",
+      "kind": "transit",
+      "mode": "taxi",
+      "distance_m": 456.20545665399897,
+      "difficulty": 0.0,
+      "time_function": "taxi_ride",
+      "speed_kmh": 30.0,
+      "travel_sec": 54.74465479847987
+    },
+    {
+      "from": "dummy:taxi:10",
+      "to": "walk:12",
+      "kind": "alight",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:taxi:10",
+      "to": "taxi:10",
+      "kind": "enter",
+      "mode": "taxi",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:0",
+      "to": "dummy:bus:0",
+      "kind": "exit",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:0",
+      "to": "bus:1",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 609.0131956572045,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 73.08158347886453
+    },
+    {
+      "from": "bus:0",
+      "to": "bus:4",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 653.710205543823,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 78.44522466525875
+    },
+    {
+      "from": "dummy:bus:0",
+      "to": "walk:1",
+      "kind": "alight",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:bus:0",
+      "to": "bus:0",
+      "kind": "enter",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:1",
+      "to": "dummy:bus:1",
+      "kind": "exit",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:1",
+      "to": "bus:0",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 609.0131956572045,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 73.08158347886453
+    },
+    {
+      "from": "bus:1",
+      "to": "bus:2",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 158.88763016541785,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 19.06651561985014
+    },
+    {
+      "from": "dummy:bus:1",
+      "to": "walk:5",
+      "kind": "alight",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:bus:1",
+      "to": "bus:1",
+      "kind": "enter",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:2",
+      "to": "dummy:bus:2",
+      "kind": "exit",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:2",
+      "to": "bus:1",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 158.88763016541785,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 19.06651561985014
+    },
+    {
+      "from": "bus:2",
+      "to": "bus:3",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 333.63778197412955,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 40.03653383689554
+    },
+    {
+      "from": "dummy:bus:2",
+      "to": "walk:6",
+      "kind": "alight",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:bus:2",
+      "to": "bus:2",
+      "kind": "enter",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:3",
+      "to": "dummy:bus:3",
+      "kind": "exit",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:3",
+      "to": "bus:2",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 333.63778197412955,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 40.03653383689554
+    },
+    {
+      "from": "bus:3",
+      "to": "bus:5",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 465.3696380845957,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 55.844356570151476
+    },
+    {
+      "from": "dummy:bus:3",
+      "to": "walk:7",
+      "kind": "alight",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:bus:3",
+      "to": "bus:3",
+      "kind": "enter",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:4",
+      "to": "dummy:bus:4",
+      "kind": "exit",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:4",
+      "to": "bus:5",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 456.20545665399897,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 54.74465479847987
+    },
+    {
+      "from": "bus:4",
+      "to": "bus:0",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 653.710205543823,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 78.44522466525875
+    },
+    {
+      "from": "dummy:bus:4",
+      "to": "walk:8",
+      "kind": "alight",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:bus:4",
+      "to": "bus:4",
+      "kind": "enter",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:5",
+      "to": "dummy:bus:5",
+      "kind": "exit",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "bus:5",
+      "to": "bus:3",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 465.3696380845957,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 55.844356570151476
+    },
+    {
+      "from": "bus:5",
+      "to": "bus:4",
+      "kind": "transit",
+      "mode": "bus",
+      "distance_m": 456.20545665399897,
+      "difficulty": 0.0,
+      "time_function": "bus_timetable",
+      "headway_sec": 900.0,
+      "service_start_sec": 21600.0,
+      "service_end_sec": 79200.0,
+      "dwell_sec": 30.0,
+      "travel_sec": 54.74465479847987
+    },
+    {
+      "from": "dummy:bus:5",
+      "to": "walk:12",
+      "kind": "alight",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    },
+    {
+      "from": "dummy:bus:5",
+      "to": "bus:5",
+      "kind": "enter",
+      "mode": "bus",
+      "distance_m": 0.0,
+      "difficulty": 0.0,
+      "time_function": "zero",
+      "travel_sec": 0.0
+    }
+  ]
+}

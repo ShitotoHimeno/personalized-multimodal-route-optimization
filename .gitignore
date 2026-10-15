@@ -29,6 +29,9 @@ env/
 # osmnx download cache
 cache/
 
+# 集計された派生CSV（SIMxxx.json から再生成可能）
+data/summary/
+
 # OS / Editor
 .DS_Store
 Thumbs.db

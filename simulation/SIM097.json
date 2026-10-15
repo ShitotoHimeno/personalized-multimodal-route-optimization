@@ -1,0 +1,193 @@
+{
+  "simulation_id": "SIM097",
+  "timestamp": "2026-10-15T05:47:56+00:00",
+  "map_id": "map_sketch_1000m_ext10",
+  "scenario_id": "SC003",
+  "od": {
+    "departure": "walk:18",
+    "arrival": "walk:14"
+  },
+  "profile": {
+    "walking_speed_mps": 1.4,
+    "walking_ability_g_max": 0.8,
+    "arrival_weight_w_t": 0.9,
+    "walking_motivation_w_e": 0.1,
+    "effort_direction_s": 1
+  },
+  "time_constraint": {
+    "type": "hard",
+    "t_max_budget_sec": 1200,
+    "delay_penalty_lambda": null
+  },
+  "depart_time_sec": 28800.0,
+  "allowed_modes": [
+    "walk",
+    "taxi",
+    "bus"
+  ],
+  "od_seed": 5,
+  "capacity": null,
+  "feasible": true,
+  "removed_walk_edges": 12,
+  "result": {
+    "pareto_front": [
+      {
+        "solution_id": 0,
+        "f1_sec": 460.47489432256475,
+        "f2": 338.34326748485216,
+        "d_sec": 0.0,
+        "u": 0.1,
+        "rank": 1,
+        "path": [
+          "walk:18",
+          "walk:16",
+          "walk:21",
+          "walk:14"
+        ]
+      },
+      {
+        "solution_id": 1,
+        "f1_sec": 478.74341282615717,
+        "f2": 315.108576900731,
+        "d_sec": 0.0,
+        "u": 0.17311142901390292,
+        "rank": 2,
+        "path": [
+          "walk:18",
+          "walk:6",
+          "walk:16",
+          "walk:21",
+          "walk:14"
+        ]
+      },
+      {
+        "solution_id": 2,
+        "f1_sec": 489.0787642794173,
+        "f2": 272.6882115491205,
+        "d_sec": 0.0,
+        "u": 0.20439968338737313,
+        "rank": 3,
+        "path": [
+          "walk:18",
+          "walk:16",
+          "walk:13",
+          "walk:7",
+          "walk:14"
+        ]
+      },
+      {
+        "solution_id": 3,
+        "f1_sec": 500.29115670644,
+        "f2": 252.6103944841252,
+        "d_sec": 0.0,
+        "u": 0.24727028649837066,
+        "rank": 4,
+        "path": [
+          "walk:18",
+          "walk:6",
+          "walk:13",
+          "walk:7",
+          "walk:14"
+        ]
+      },
+      {
+        "solution_id": 4,
+        "f1_sec": 507.34728278300975,
+        "f2": 249.45352096499943,
+        "d_sec": 0.0,
+        "u": 0.27751111240127607,
+        "rank": 5,
+        "path": [
+          "walk:18",
+          "walk:6",
+          "walk:16",
+          "walk:13",
+          "walk:7",
+          "walk:14"
+        ]
+      },
+      {
+        "solution_id": 5,
+        "f1_sec": 520.245568539195,
+        "f2": 104.27595972884079,
+        "d_sec": 0.0,
+        "u": 0.2848171552593171,
+        "rank": 6,
+        "path": [
+          "walk:18",
+          "walk:10",
+          "dummy:taxi:9",
+          "taxi:9",
+          "taxi:6",
+          "taxi:3",
+          "dummy:taxi:3",
+          "walk:4",
+          "walk:14"
+        ]
+      },
+      {
+        "solution_id": 6,
+        "f1_sec": 539.2262332401114,
+        "f2": 75.5117388123668,
+        "d_sec": 0.0,
+        "u": 0.3591874815502993,
+        "rank": 7,
+        "path": [
+          "walk:18",
+          "walk:10",
+          "dummy:taxi:9",
+          "taxi:9",
+          "taxi:6",
+          "dummy:taxi:6",
+          "walk:7",
+          "walk:14"
+        ]
+      },
+      {
+        "solution_id": 7,
+        "f1_sec": 663.190716485078,
+        "f2": 47.74776194825156,
+        "d_sec": 0.0,
+        "u": 0.9,
+        "rank": 8,
+        "path": [
+          "walk:18",
+          "dummy:taxi:11",
+          "taxi:11",
+          "taxi:5",
+          "taxi:6",
+          "dummy:taxi:6",
+          "walk:7",
+          "walk:14"
+        ]
+      }
+    ],
+    "selected": 0,
+    "weighted_scalarization": {
+      "0.0": 7,
+      "0.05": 7,
+      "0.1": 7,
+      "0.15": 7,
+      "0.2": 6,
+      "0.25": 6,
+      "0.3": 6,
+      "0.35": 6,
+      "0.4": 6,
+      "0.45": 6,
+      "0.5": 6,
+      "0.55": 6,
+      "0.6": 6,
+      "0.65": 5,
+      "0.7": 5,
+      "0.75": 5,
+      "0.8": 0,
+      "0.85": 0,
+      "0.9": 0,
+      "0.95": 0,
+      "1.0": 0
+    }
+  },
+  "timing": {
+    "compute_sec": 0.0481
+  }
+}

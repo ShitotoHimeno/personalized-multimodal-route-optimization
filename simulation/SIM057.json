@@ -1,0 +1,227 @@
+{
+  "simulation_id": "SIM057",
+  "timestamp": "2026-10-15T05:42:36+00:00",
+  "map_id": "map_sketch_1000m_ext10",
+  "scenario_id": "SC003",
+  "od": {
+    "departure": "walk:22",
+    "arrival": "walk:2"
+  },
+  "profile": {
+    "walking_speed_mps": 1.4,
+    "walking_ability_g_max": 0.8,
+    "arrival_weight_w_t": 0.9,
+    "walking_motivation_w_e": 0.1,
+    "effort_direction_s": 1
+  },
+  "time_constraint": {
+    "type": "hard",
+    "t_max_budget_sec": 1200,
+    "delay_penalty_lambda": null
+  },
+  "depart_time_sec": 28800.0,
+  "allowed_modes": [
+    "walk",
+    "taxi",
+    "bus"
+  ],
+  "od_seed": 191,
+  "capacity": null,
+  "feasible": true,
+  "removed_walk_edges": 12,
+  "result": {
+    "pareto_front": [
+      {
+        "solution_id": 1,
+        "f1_sec": 455.12768356538004,
+        "f2": 270.97338605329276,
+        "d_sec": 0.0,
+        "u": 0.0828775066082356,
+        "rank": 1,
+        "path": [
+          "walk:22",
+          "walk:16",
+          "walk:5",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 0,
+        "f1_sec": 435.8933468491248,
+        "f2": 356.4873021284314,
+        "d_sec": 0.0,
+        "u": 0.1,
+        "rank": 2,
+        "path": [
+          "walk:22",
+          "walk:6",
+          "walk:5",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 2,
+        "f1_sec": 753.3055823549378,
+        "f2": 256.5858301050892,
+        "d_sec": 0.0,
+        "u": 0.4297540391724133,
+        "rank": 3,
+        "path": [
+          "walk:22",
+          "walk:13",
+          "walk:21",
+          "dummy:taxi:14",
+          "taxi:14",
+          "taxi:6",
+          "taxi:0",
+          "dummy:taxi:0",
+          "walk:0",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 3,
+        "f1_sec": 804.8472557438665,
+        "f2": 212.2151003186127,
+        "d_sec": 0.0,
+        "u": 0.47015549612892865,
+        "rank": 4,
+        "path": [
+          "walk:22",
+          "dummy:bus:7",
+          "bus:7",
+          "bus:6",
+          "dummy:bus:6",
+          "walk:13",
+          "walk:7",
+          "walk:0",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 4,
+        "f1_sec": 946.2110724983525,
+        "f2": 207.28857891568737,
+        "d_sec": 0.0,
+        "u": 0.6354916142101138,
+        "rank": 5,
+        "path": [
+          "walk:22",
+          "walk:13",
+          "walk:21",
+          "dummy:taxi:14",
+          "taxi:14",
+          "taxi:6",
+          "taxi:2",
+          "taxi:1",
+          "dummy:taxi:1",
+          "walk:1",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 5,
+        "f1_sec": 1001.935665509319,
+        "f2": 191.63343466241724,
+        "d_sec": 0.0,
+        "u": 0.6942624249622995,
+        "rank": 6,
+        "path": [
+          "walk:22",
+          "walk:7",
+          "dummy:taxi:6",
+          "taxi:6",
+          "taxi:0",
+          "dummy:taxi:0",
+          "walk:0",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 6,
+        "f1_sec": 1021.9666829429973,
+        "f2": 182.55485436077407,
+        "d_sec": 0.0,
+        "u": 0.7137769193469234,
+        "rank": 7,
+        "path": [
+          "walk:22",
+          "walk:6",
+          "dummy:taxi:5",
+          "taxi:5",
+          "taxi:4",
+          "taxi:1",
+          "dummy:taxi:1",
+          "walk:1",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 7,
+        "f1_sec": 1191.5578579739688,
+        "f2": 143.24747432158853,
+        "d_sec": 0.0,
+        "u": 0.8965320302637215,
+        "rank": 8,
+        "path": [
+          "walk:22",
+          "walk:16",
+          "dummy:taxi:12",
+          "taxi:12",
+          "taxi:5",
+          "taxi:4",
+          "taxi:1",
+          "dummy:taxi:1",
+          "walk:1",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 8,
+        "f1_sec": 1194.8411556527337,
+        "f2": 142.33618347301538,
+        "d_sec": 0.0,
+        "u": 0.9,
+        "rank": 9,
+        "path": [
+          "walk:22",
+          "walk:7",
+          "dummy:taxi:6",
+          "taxi:6",
+          "taxi:2",
+          "taxi:1",
+          "dummy:taxi:1",
+          "walk:1",
+          "walk:2"
+        ]
+      }
+    ],
+    "selected": 1,
+    "weighted_scalarization": {
+      "0.0": 8,
+      "0.05": 8,
+      "0.1": 8,
+      "0.15": 1,
+      "0.2": 1,
+      "0.25": 1,
+      "0.3": 1,
+      "0.35": 1,
+      "0.4": 1,
+      "0.45": 1,
+      "0.5": 1,
+      "0.55": 1,
+      "0.6": 1,
+      "0.65": 1,
+      "0.7": 1,
+      "0.75": 1,
+      "0.8": 1,
+      "0.85": 0,
+      "0.9": 0,
+      "0.95": 0,
+      "1.0": 0
+    }
+  },
+  "timing": {
+    "compute_sec": 0.0356
+  }
+}

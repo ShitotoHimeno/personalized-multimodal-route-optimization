@@ -54,6 +54,9 @@
 │   │   ├── SIM007_map.png
 │   │   ├── SIM007_pareto.png
 │   │   └── TCU_yokohama_preview.png
+│   ├── summary/
+│   │   ├── simulations.csv
+│   │   └── solutions.csv
 │   ├── map_medium_1000m.pkl
 │   ├── map_tcu_yokohama_500m.gpickle
 │   ├── map_tcu_yokohama_500m_dense.gpickle
@@ -86,6 +89,10 @@
 │   ├── util/
 │   │   ├── __init__.py
 │   │   └── capacity.py
+│   ├── analyze/
+│   │   ├── __init__.py
+│   │   ├── __main__.py
+│   │   └── analyze.py
 │   └── visualize/
 │       ├── __init__.py
 │       └── visualize.py
@@ -147,6 +154,15 @@
 
 > **補足**: これらは生成物ですが、再現性確保のためリポジトリ内に保持されています。通常実行時は `src.makemap` でconfigから動的に生成可能です。
 
+### 6.3 `data/summary/` - 集計済み CSV（派生ビュー）
+
+| ファイル | 役割 |
+|---|---|
+| **simulations.csv** | `src.analyze` が生成する 1 実行 = 1 行の概要（scenario・feasible・パレート解数・選択解の目的関数値・計算時間など）。Excel での俯瞰・フィルタ用。 |
+| **solutions.csv** | `src.analyze` が生成する 1 パレート解 = 1 行の詳細（`f1_sec`・`f2`・`d_sec`・`u`・`rank`・`is_selected`・`path`）。 |
+
+> **補足**: `simulation/SIMxxx.json` から再生成可能な派生ビューであり、`.gitignore` で管理対象外としています（`python -m src.analyze` で再生成）。
+
 ## 7. `simulation/` - シミュレーション実行ログ
 
 | ファイル | 役割 |
@@ -196,7 +212,15 @@
 | **__init__.py** | エクスポート：`CapacityEstimate`, `InsufficientResourcesError`, `ResourceGuard`, `available_memory_bytes`, `check_capacity`, `estimate_capacity`, `process_rss_bytes`, `total_memory_bytes`。 |
 | **capacity.py** | 計算資源（メモリ・実行時間）の事前見積りと実行中監視。パレートラベル増加によるOOM/長時間実行を早期検知。`check_capacity()` で実行前に概算（経験則ベース）、`ResourceGuard` で実行中に経過時間・メモリ使用量を監視。psutil が無い場合は `/proc/meminfo` から取得。 |
 
-### 8.6 `src/visualize/` - 可視化
+### 8.6 `src/analyze/` - シミュレーションログの集計
+
+| ファイル | 役割 |
+|---|---|
+| **__init__.py** | エクスポート：`export_csv`, `flatten_simulation`, `flatten_solutions`, `load_logs`。 |
+| **__main__.py** | CLIエントリポイント（`python -m src.analyze`）。引数：`--input`（既定 `simulation`）、`--out`（既定 `data/summary`）。実行後、CSVの行数を出力。 |
+| **analyze.py** | `simulation/SIMxxx.json`（1実行=1ファイル）を走査し、Excel等で確認しやすい派生CSVを生成。`simulations.csv`（1実行=1行の概要：scenario・feasible・パレート解数・選択解の目的関数値・計算時間）と、`solutions.csv`（1解=1行の詳細：`f1_sec`・`f2`・`d_sec`・`u`・`rank`・`is_selected`・`path`）を出力。`path` は `walk:11 > taxi:10 > ...` のように結合、文字化け防止のため BOM 付き UTF-8（`utf-8-sig`）。CSV は再生成可能な生成物として扱う。 |
+
+### 8.7 `src/visualize/` - 可視化
 
 | ファイル | 役割 |
 |---|---|
@@ -237,4 +261,7 @@
 
   # シミュレーション実行
   python -m src.simulate --config config/map_config/map_config_tcu_yokohama_dense.json --scenario SC005 --no-capacity-check
+
+  # シミュレーションログの集計（CSV 出力）
+  python -m src.analyze --input simulation --out data/summary
   ```

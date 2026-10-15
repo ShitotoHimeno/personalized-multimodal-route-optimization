@@ -1,0 +1,150 @@
+{
+  "simulation_id": "SIM125",
+  "timestamp": "2026-10-15T05:49:39+00:00",
+  "map_id": "map_sketch_1000m_ext10",
+  "scenario_id": "SC007",
+  "od": {
+    "departure": "walk:7",
+    "arrival": "walk:15"
+  },
+  "profile": {
+    "walking_speed_mps": 1.2,
+    "walking_ability_g_max": 1.0,
+    "arrival_weight_w_t": 0.2,
+    "walking_motivation_w_e": 0.8,
+    "effort_direction_s": -1
+  },
+  "time_constraint": {
+    "type": "soft",
+    "t_max_budget_sec": 7200,
+    "delay_penalty_lambda": 0.2
+  },
+  "depart_time_sec": 28800.0,
+  "allowed_modes": [
+    "walk",
+    "taxi",
+    "bus"
+  ],
+  "od_seed": 8,
+  "capacity": null,
+  "feasible": true,
+  "removed_walk_edges": 0,
+  "result": {
+    "pareto_front": [
+      {
+        "solution_id": 0,
+        "f1_sec": 386.9553859917279,
+        "f2": 271.0987196425066,
+        "d_sec": 0.0,
+        "u": -0.8,
+        "rank": 1,
+        "path": [
+          "walk:7",
+          "walk:4",
+          "walk:15"
+        ]
+      },
+      {
+        "solution_id": 1,
+        "f1_sec": 426.029231699615,
+        "f2": 239.46534642882727,
+        "d_sec": 0.0,
+        "u": -0.67222866950278,
+        "rank": 2,
+        "path": [
+          "walk:7",
+          "dummy:bus:3",
+          "bus:3",
+          "dummy:bus:3",
+          "walk:7",
+          "walk:21",
+          "walk:4",
+          "walk:15"
+        ]
+      },
+      {
+        "solution_id": 2,
+        "f1_sec": 431.31719217123464,
+        "f2": 105.15871776476139,
+        "d_sec": 0.0,
+        "u": -0.2712374054576578,
+        "rank": 3,
+        "path": [
+          "walk:7",
+          "walk:21",
+          "dummy:taxi:14",
+          "taxi:14",
+          "taxi:6",
+          "taxi:2",
+          "taxi:15",
+          "dummy:taxi:15",
+          "walk:15"
+        ]
+      },
+      {
+        "solution_id": 3,
+        "f1_sec": 510.68602167410427,
+        "f2": 73.09750974243275,
+        "d_sec": 0.0,
+        "u": -0.10670509026911522,
+        "rank": 4,
+        "path": [
+          "walk:7",
+          "walk:13",
+          "walk:21",
+          "dummy:taxi:14",
+          "taxi:14",
+          "taxi:6",
+          "taxi:2",
+          "taxi:15",
+          "dummy:taxi:15",
+          "walk:15"
+        ]
+      },
+      {
+        "solution_id": 4,
+        "f1_sec": 613.9792044327551,
+        "f2": 0.0,
+        "d_sec": 0.0,
+        "u": 0.2,
+        "rank": 5,
+        "path": [
+          "walk:7",
+          "dummy:taxi:6",
+          "taxi:6",
+          "taxi:2",
+          "taxi:15",
+          "dummy:taxi:15",
+          "walk:15"
+        ]
+      }
+    ],
+    "selected": 0,
+    "weighted_scalarization": {
+      "0.0": 4,
+      "0.05": 4,
+      "0.1": 4,
+      "0.15": 4,
+      "0.2": 4,
+      "0.25": 4,
+      "0.3": 4,
+      "0.35": 4,
+      "0.4": 2,
+      "0.45": 2,
+      "0.5": 2,
+      "0.55": 2,
+      "0.6": 2,
+      "0.65": 2,
+      "0.7": 2,
+      "0.75": 2,
+      "0.8": 0,
+      "0.85": 0,
+      "0.9": 0,
+      "0.95": 0,
+      "1.0": 0
+    }
+  },
+  "timing": {
+    "compute_sec": 0.0371
+  }
+}

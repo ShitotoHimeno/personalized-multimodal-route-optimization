@@ -1,0 +1,81 @@
+{
+  "simulation_id": "SIM139",
+  "timestamp": "2026-10-15T05:50:32+00:00",
+  "map_id": "map_sketch_1000m_ext10",
+  "scenario_id": "SC004",
+  "od": {
+    "departure": "walk:21",
+    "arrival": "walk:17"
+  },
+  "profile": {
+    "walking_speed_mps": 1.5,
+    "walking_ability_g_max": 1.0,
+    "arrival_weight_w_t": 0.5,
+    "walking_motivation_w_e": 0.5,
+    "effort_direction_s": 1
+  },
+  "time_constraint": {
+    "type": "soft",
+    "t_max_budget_sec": 3600,
+    "delay_penalty_lambda": 1.0
+  },
+  "depart_time_sec": 28800.0,
+  "allowed_modes": [
+    "walk",
+    "taxi",
+    "bus"
+  ],
+  "od_seed": 10,
+  "capacity": null,
+  "feasible": true,
+  "removed_walk_edges": 0,
+  "result": {
+    "pareto_front": [
+      {
+        "solution_id": 0,
+        "f1_sec": 311.90115466736097,
+        "f2": 0.0,
+        "d_sec": 0.0,
+        "u": 0.0,
+        "rank": 1,
+        "path": [
+          "walk:21",
+          "dummy:taxi:14",
+          "taxi:14",
+          "taxi:6",
+          "taxi:10",
+          "taxi:13",
+          "dummy:taxi:13",
+          "walk:17"
+        ]
+      }
+    ],
+    "selected": 0,
+    "weighted_scalarization": {
+      "0.0": 0,
+      "0.05": 0,
+      "0.1": 0,
+      "0.15": 0,
+      "0.2": 0,
+      "0.25": 0,
+      "0.3": 0,
+      "0.35": 0,
+      "0.4": 0,
+      "0.45": 0,
+      "0.5": 0,
+      "0.55": 0,
+      "0.6": 0,
+      "0.65": 0,
+      "0.7": 0,
+      "0.75": 0,
+      "0.8": 0,
+      "0.85": 0,
+      "0.9": 0,
+      "0.95": 0,
+      "1.0": 0
+    }
+  },
+  "timing": {
+    "compute_sec": 0.0278
+  }
+}

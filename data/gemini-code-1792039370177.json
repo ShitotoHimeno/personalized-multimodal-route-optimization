@@ -1,0 +1,52 @@
+{
+  "connect_radius": 150.0,
+  "isolation_fallback": true,
+
+  "walk_nodes": {
+    "w1": { "x": 0.0, "y": 0.0, "z": 0.0, "difficulty": 1.0 },
+    "w2": { "x": 100.0, "y": 0.0, "z": 0.0, "difficulty": 1.2 },
+    "w3": { "x": 200.0, "y": 50.0, "z": 5.0, "difficulty": 1.5 },
+    "w4": { "x": 300.0, "y": 0.0, "z": 0.0, "difficulty": 1.0 }
+  },
+
+  "taxi_nodes": [
+    {
+      "id": "t1",
+      "host": "w1",
+      "taxi_arrival_time": 300.0
+    },
+    {
+      "id": "t2",
+      "host": "w3",
+      "taxi_arrival_time": 300.0
+    }
+  ],
+
+  "bus_nodes": [
+    {
+      "id": "b1",
+      "host": "w2",
+      "bus_timetable": [28800, 29400, 30000, 30600]
+    },
+    {
+      "id": "b2",
+      "host": "w4",
+      "bus_timetable": [29100, 29700, 30300, 30900]
+    }
+  ],
+
+  "transit_edges": [
+    {
+      "type": "taxi",
+      "from": "t1",
+      "to": "t2",
+      "taxi_ride": 180.0
+    },
+    {
+      "type": "bus",
+      "from": "b1",
+      "to": "b2",
+      "bus_travel_time": 300.0
+    }
+  ]
+}

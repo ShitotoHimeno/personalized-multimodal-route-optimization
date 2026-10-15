@@ -1,0 +1,102 @@
+{
+  "simulation_id": "SIM035",
+  "timestamp": "2026-10-15T05:05:52+00:00",
+  "map_id": "map_sketch_1000m",
+  "scenario_id": "SC005",
+  "od": {
+    "departure": "walk:11",
+    "arrival": "walk:2"
+  },
+  "profile": {
+    "walking_speed_mps": 0.9,
+    "walking_ability_g_max": 0.6,
+    "arrival_weight_w_t": 0.9,
+    "walking_motivation_w_e": 0.1,
+    "effort_direction_s": 1
+  },
+  "time_constraint": {
+    "type": "hard",
+    "t_max_budget_sec": 1500,
+    "delay_penalty_lambda": null
+  },
+  "depart_time_sec": 28800.0,
+  "allowed_modes": [
+    "walk",
+    "taxi",
+    "bus"
+  ],
+  "od_seed": 20261010,
+  "capacity": null,
+  "feasible": true,
+  "removed_walk_edges": 18,
+  "result": {
+    "pareto_front": [
+      {
+        "solution_id": 0,
+        "f1_sec": 1220.9647747309323,
+        "f2": 314.07092113521537,
+        "d_sec": 0.0,
+        "u": 0.1,
+        "rank": 1,
+        "path": [
+          "walk:11",
+          "walk:12",
+          "dummy:taxi:10",
+          "taxi:10",
+          "taxi:6",
+          "taxi:5",
+          "taxi:4",
+          "dummy:taxi:4",
+          "walk:5",
+          "walk:2"
+        ]
+      },
+      {
+        "solution_id": 1,
+        "f1_sec": 1302.4784560767193,
+        "f2": 265.6889386099471,
+        "d_sec": 0.0,
+        "u": 0.9,
+        "rank": 2,
+        "path": [
+          "walk:11",
+          "walk:12",
+          "dummy:taxi:10",
+          "taxi:10",
+          "taxi:6",
+          "taxi:0",
+          "dummy:taxi:0",
+          "walk:0",
+          "walk:2"
+        ]
+      }
+    ],
+    "selected": 0,
+    "weighted_scalarization": {
+      "0.0": 1,
+      "0.05": 1,
+      "0.1": 1,
+      "0.15": 1,
+      "0.2": 1,
+      "0.25": 1,
+      "0.3": 1,
+      "0.35": 1,
+      "0.4": 0,
+      "0.45": 0,
+      "0.5": 0,
+      "0.55": 0,
+      "0.6": 0,
+      "0.65": 0,
+      "0.7": 0,
+      "0.75": 0,
+      "0.8": 0,
+      "0.85": 0,
+      "0.9": 0,
+      "0.95": 0,
+      "1.0": 0
+    }
+  },
+  "timing": {
+    "compute_sec": 0.0375
+  }
+}

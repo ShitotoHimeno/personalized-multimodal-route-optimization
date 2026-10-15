@@ -1,0 +1,119 @@
+{
+  "simulation_id": "SIM067",
+  "timestamp": "2026-10-15T05:45:39+00:00",
+  "map_id": "map_sketch_1000m_ext10",
+  "scenario_id": "SC005",
+  "od": {
+    "departure": "walk:10",
+    "arrival": "walk:11"
+  },
+  "profile": {
+    "walking_speed_mps": 0.9,
+    "walking_ability_g_max": 0.6,
+    "arrival_weight_w_t": 0.9,
+    "walking_motivation_w_e": 0.1,
+    "effort_direction_s": 1
+  },
+  "time_constraint": {
+    "type": "hard",
+    "t_max_budget_sec": 1500,
+    "delay_penalty_lambda": null
+  },
+  "depart_time_sec": 28800.0,
+  "allowed_modes": [
+    "walk",
+    "taxi",
+    "bus"
+  ],
+  "od_seed": 1,
+  "capacity": null,
+  "feasible": true,
+  "removed_walk_edges": 44,
+  "result": {
+    "pareto_front": [
+      {
+        "solution_id": 0,
+        "f1_sec": 706.0046600211504,
+        "f2": 158.43978339216858,
+        "d_sec": 0.0,
+        "u": 0.1,
+        "rank": 1,
+        "path": [
+          "walk:10",
+          "dummy:taxi:9",
+          "taxi:9",
+          "taxi:6",
+          "taxi:10",
+          "dummy:taxi:10",
+          "walk:12",
+          "walk:11"
+        ]
+      },
+      {
+        "solution_id": 1,
+        "f1_sec": 785.5418754285181,
+        "f2": 112.67045399030684,
+        "d_sec": 0.0,
+        "u": 0.8414720514138986,
+        "rank": 2,
+        "path": [
+          "walk:10",
+          "dummy:taxi:9",
+          "taxi:9",
+          "taxi:6",
+          "taxi:5",
+          "taxi:12",
+          "dummy:taxi:12",
+          "walk:16",
+          "walk:22",
+          "walk:11"
+        ]
+      },
+      {
+        "solution_id": 2,
+        "f1_sec": 791.2718425000498,
+        "f2": 111.7591631417337,
+        "d_sec": 0.0,
+        "u": 0.9,
+        "rank": 3,
+        "path": [
+          "walk:10",
+          "dummy:taxi:9",
+          "taxi:9",
+          "taxi:6",
+          "dummy:taxi:6",
+          "walk:7",
+          "walk:22",
+          "walk:11"
+        ]
+      }
+    ],
+    "selected": 0,
+    "weighted_scalarization": {
+      "0.0": 2,
+      "0.05": 2,
+      "0.1": 2,
+      "0.15": 1,
+      "0.2": 1,
+      "0.25": 1,
+      "0.3": 1,
+      "0.35": 1,
+      "0.4": 0,
+      "0.45": 0,
+      "0.5": 0,
+      "0.55": 0,
+      "0.6": 0,
+      "0.65": 0,
+      "0.7": 0,
+      "0.75": 0,
+      "0.8": 0,
+      "0.85": 0,
+      "0.9": 0,
+      "0.95": 0,
+      "1.0": 0
+    }
+  },
+  "timing": {
+    "compute_sec": 0.0309
+  }
+}

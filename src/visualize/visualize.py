@@ -111,8 +111,12 @@ def plot_node_map(
     output_path: str | Path,
     highlight_path: Sequence[str] | None = None,
     show_difficulty: bool = True,
+    title: str | None = None,
 ) -> None:
-    """ノードマップをPNGで出力する。徒歩エッジは困難度で、乗り物エッジはモード色で描く。"""
+    """ノードマップをPNGで出力する。徒歩エッジは困難度で、乗り物エッジはモード色で描く。
+
+    ``title`` を省略した場合は ``node map: <map_id>`` を使う。
+    """
     fig, ax = plt.subplots(figsize=(9, 9))
     sm = _draw_map(ax, G, highlight_path=highlight_path, show_difficulty=show_difficulty)
     if sm is not None:
@@ -121,7 +125,7 @@ def plot_node_map(
 
     ax.set_xlabel("x [m]")
     ax.set_ylabel("y [m]")
-    ax.set_title(f"node map: {G.graph.get('map_id')}")
+    ax.set_title(title if title is not None else f"node map: {G.graph.get('map_id')}")
     ax.set_aspect("equal")
     ax.legend(loc="upper left", fontsize=8)
     fig.tight_layout()
@@ -188,11 +192,14 @@ def plot_scenario_panels(
     entries: Sequence[dict[str, Any]],
     output_path: str | Path,
     show_difficulty: bool = True,
+    title: str | None = None,
 ) -> None:
     """アブストラクト用の小分割パネルを出力する。
 
     列がシナリオに対応し、上段は推奨経路を強調したノードマップ、
     下段はそのシナリオのパレートフロンティア（推奨点を★で表示）を描く。
+
+    ``title`` を渡すと図全体のタイトル（suptitle）として描画する。
 
     ``entries`` の各要素は次のキーを持つ辞書:
         - ``scenario_id`` (str)
@@ -213,10 +220,10 @@ def plot_scenario_panels(
             highlight_path=e.get("highlight_path"),
             show_difficulty=show_difficulty,
         )
-        title = e["scenario_id"]
+        panel_title = e["scenario_id"]
         if e.get("name"):
-            title += f"\n{e['name']}"
-        ax_top.set_title(title, fontsize=11)
+            panel_title += f"\n{e['name']}"
+        ax_top.set_title(panel_title, fontsize=11)
         ax_top.set_aspect("equal")
         if j == 0:
             ax_top.set_xlabel("x [m]")
@@ -232,6 +239,9 @@ def plot_scenario_panels(
     if sm is not None:
         cbar = fig.colorbar(sm, ax=list(axes[0]), shrink=0.7, pad=0.015)
         cbar.set_label("difficulty")
+
+    if title is not None:
+        fig.suptitle(title)
 
     _save(fig, output_path)
     plt.close(fig)

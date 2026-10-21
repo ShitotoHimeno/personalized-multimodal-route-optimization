@@ -1,0 +1,49 @@
+<mxfile host="65bd71144e">
+    <diagram id="wfc" name="コンパクト">
+        <mxGraphModel dx="219" dy="368" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="540" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="c_env" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;verticalAlign=middle;align=center;" value="環境情報&lt;br&gt;距離・困難度&lt;br&gt;バス／タクシー時刻" vertex="1">
+                    <mxGeometry height="90" width="200" x="40" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_person" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;verticalAlign=middle;align=center;" value="個人情報&lt;br&gt;歩行能力 G_max&lt;br&gt;到着重視度 wₜ&lt;br&gt;歩行意欲 wₑ・評価方向 s" vertex="1">
+                    <mxGeometry height="110" width="300" x="260" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_order" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;verticalAlign=middle;align=center;" value="注文情報&lt;br&gt;出発・到着ノード&lt;br&gt;到着時間制約 t_max" vertex="1">
+                    <mxGeometry height="90" width="200" x="580" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_A" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;fontStyle=1;verticalAlign=middle;align=center;" value="マルチモーダル時間拡張ノードマップ構築 ＋ 制約適用&lt;br&gt;（徒歩ネットワークにバス・タクシーを重ね合わせ）" vertex="1">
+                    <mxGeometry height="76" width="520" x="150" y="195" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_B" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" value="多目的最適化　f₁＝総所要時間 ／ f₂＝運動負荷&lt;br&gt;⇒ パレート最適解群" vertex="1">
+                    <mxGeometry height="72" width="520" x="150" y="305" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_C" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=15;fontStyle=1;verticalAlign=middle;align=center;" value="正規化 ＋ 重み付けスコアリング&lt;br&gt;U = wₜ·f₁′ + wₑ·s·f₂′　（wₜ＋wₑ＝1）&lt;br&gt;⇒ 推奨経路を提示" vertex="1">
+                    <mxGeometry height="92" width="580" x="120" y="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_e1" edge="1" parent="1" source="c_env" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c_A" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_e2" edge="1" parent="1" source="c_person" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c_A" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_e3" edge="1" parent="1" source="c_order" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c_A" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_e4" edge="1" parent="1" source="c_A" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c_B" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_e5" edge="1" parent="1" source="c_B" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c_C" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AdL4AjExT30zXOeI7ygW-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="Text" vertex="1">
+                    <mxGeometry height="26" width="40" x="411" y="257" as="geometry"/>
+                </mxCell>
+                <mxCell id="AdL4AjExT30zXOeI7ygW-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="図１：提案手法の手順と情報の流れ" vertex="1">
+                    <mxGeometry height="26" width="210" x="305" y="8" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

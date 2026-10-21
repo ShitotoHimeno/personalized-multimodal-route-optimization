@@ -1,0 +1,9 @@
+﻿simulation_id,scenario_id,scenario_name,map_id,od_departure,od_arrival,feasible,removed_walk_edges,n_pareto,selected_id,selected_f1_sec,selected_f2,selected_d_sec,selected_u,compute_sec
+SIM144,SC001,高齢者,map_sketch_1000m_ext10,walk:7,walk:19,1,76,2,0,939.675649421315,84.38427944463872,0.0,0.3,0.0211
+SIM145,SC002,運動重視,map_sketch_1000m_ext10,walk:7,walk:19,1,0,5,0,227.6726629957405,182.43328214942022,0.0,-0.8,0.062
+SIM146,SC003,通勤者,map_sketch_1000m_ext10,walk:7,walk:19,1,12,5,0,339.172876510859,303.463809876454,0.0,0.1,0.0436
+SIM147,SC004,歩行能力が高い利用者,map_sketch_1000m_ext10,walk:7,walk:19,1,0,5,3,955.2159301952415,47.74776194825156,0.0,0.3155389286671484,0.044
+SIM148,SC005,病院通院,map_sketch_1000m_ext10,walk:7,walk:19,1,44,4,0,573.1216402549328,213.52457031398703,0.0,0.1,0.0419
+SIM149,SC006,喫茶店での待ち合わせ,map_sketch_1000m_ext10,walk:7,walk:19,1,34,6,2,493.79161705037427,166.84395006355214,0.0,0.1804675022751468,0.0347
+SIM150,SC007,公園散歩,map_sketch_1000m_ext10,walk:7,walk:19,1,0,5,0,241.99168853120617,182.43328214942022,0.0,-0.8,0.0457
+SIM151,SC008,到着時間指定なし,map_sketch_1000m_ext10,walk:7,walk:19,1,12,6,4,955.2159301952415,47.74776194825156,0.0,0.25026429416426016,0.0418

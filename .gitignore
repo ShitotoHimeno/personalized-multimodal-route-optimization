@@ -2,18 +2,18 @@
 *
 !*/
 
-# Allow source code
+# ソースコード
 !src/**
 !src/**/*.py
-!src/**/*.js
-!src/**/*.ts
+!src/**/*.ipynb
 !src/**/*.json
 !src/**/*.yaml
 !src/**/*.yml
 !src/**/*.txt
 !src/**/*.sh
+!src/**/*.md
 
-# Allow config
+# コンフィグ
 !config/**
 !config/**/*.json
 !config/**/*.yaml
@@ -21,22 +21,25 @@
 !config/**/*.md
 !config/**/*.txt
 
-# Allow data under abstract/ (if moved there)
+# 使用したデータ（abstract配下のデータは残す）
 !abstract/**
 !abstract/**/*
 
-# Do not allow data/ at root
-data/
+# data/直下は不要
+/data/**
+!/data/
+!/data/README*
+!/data/*.md
 
-# Allow drawio files
+# drawio
 !*.drawio
 !**/*.drawio
 
-# Allow markdown files (including abstract.md and others in hierarchy)
+# マークダウン（階層問わず）
 !*.md
 !**/*.md
 
-# Allow other specific important files if needed
+# その他必要最小限
 !README*
 !LICENSE*
 !requirements*.txt
@@ -47,9 +50,11 @@ data/
 !Dockerfile
 !Makefile
 
-# Ignore generated/cache files
+# 除外（生成物等）
+data/summary/
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
 .eggs/
 build/
@@ -67,3 +72,4 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+*.swo

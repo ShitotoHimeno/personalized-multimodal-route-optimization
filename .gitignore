@@ -1,19 +1,55 @@
-# Images
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.tif
-*.tiff
-*.webp
-*.ico
-*.pdf
+# Ignore everything by default
+*
+!*/
 
-# Python
+# Allow source code
+!src/**
+!src/**/*.py
+!src/**/*.js
+!src/**/*.ts
+!src/**/*.json
+!src/**/*.yaml
+!src/**/*.yml
+!src/**/*.txt
+!src/**/*.sh
+
+# Allow config
+!config/**
+!config/**/*.json
+!config/**/*.yaml
+!config/**/*.yml
+!config/**/*.md
+!config/**/*.txt
+
+# Allow data under abstract/ (if moved there)
+!abstract/**
+!abstract/**/*
+
+# Do not allow data/ at root
+data/
+
+# Allow drawio files
+!*.drawio
+!**/*.drawio
+
+# Allow markdown files (including abstract.md and others in hierarchy)
+!*.md
+!**/*.md
+
+# Allow other specific important files if needed
+!README*
+!LICENSE*
+!requirements*.txt
+!pyproject.toml
+!setup.py
+!Pipfile
+!environment.yml
+!Dockerfile
+!Makefile
+
+# Ignore generated/cache files
 __pycache__/
 *.py[cod]
-*$py.class
 *.egg-info/
 .eggs/
 build/
@@ -25,14 +61,7 @@ env/
 .pytest_cache/
 .ruff_cache/
 .ipynb_checkpoints/
-
-# osmnx download cache
-cache/
-
-# 集計された派生CSV（SIMxxx.json から再生成可能）
-data/summary/
-
-# OS / Editor
+.cache/
 .DS_Store
 Thumbs.db
 .vscode/

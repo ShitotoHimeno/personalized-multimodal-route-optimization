@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="wfc" name="コンパクト">
-        <mxGraphModel dx="219" dy="368" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="540" math="0" shadow="0">
+        <mxGraphModel dx="1006" dy="537" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="540" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -20,7 +20,7 @@
                     <mxGeometry height="72" width="520" x="150" y="305" as="geometry"/>
                 </mxCell>
                 <mxCell id="c_C" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=15;fontStyle=1;verticalAlign=middle;align=center;" value="正規化 ＋ 重み付けスコアリング&lt;br&gt;U = wₜ·f₁′ + wₑ·s·f₂′　（wₜ＋wₑ＝1）&lt;br&gt;⇒ 推奨経路を提示" vertex="1">
-                    <mxGeometry height="92" width="580" x="120" y="420" as="geometry"/>
+                    <mxGeometry height="92" width="580" x="120" y="411" as="geometry"/>
                 </mxCell>
                 <mxCell id="c_e1" edge="1" parent="1" source="c_env" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c_A" value="">
                     <mxGeometry relative="1" as="geometry"/>
@@ -36,9 +36,6 @@
                 </mxCell>
                 <mxCell id="c_e5" edge="1" parent="1" source="c_B" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c_C" value="">
                     <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AdL4AjExT30zXOeI7ygW-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="Text" vertex="1">
-                    <mxGeometry height="26" width="40" x="411" y="257" as="geometry"/>
                 </mxCell>
                 <mxCell id="AdL4AjExT30zXOeI7ygW-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="図１：提案手法の手順と情報の流れ" vertex="1">
                     <mxGeometry height="26" width="210" x="305" y="8" as="geometry"/>

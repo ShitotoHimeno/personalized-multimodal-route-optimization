@@ -53,3 +53,6 @@ pip install -r requirements.txt  # 存在する場合
 - [ARCHITECTURE.md](ARCHITECTURE.md)
 - [config/](config/)
 - [data/](data/)
+
+## 開発環境
+本リポジトリの一部作業には [opencode](https://github.com/sst/opencode) を用いています。

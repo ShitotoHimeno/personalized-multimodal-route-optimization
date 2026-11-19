@@ -73,3 +73,9 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# 開発メモ（公開しない）
+/todo.md
+/意思決定.md
+/AIとの関わり方.md
+/manualmake_usage.md

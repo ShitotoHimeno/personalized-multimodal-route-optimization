@@ -1,0 +1,196 @@
+<mxfile host="65bd71144e">
+    <diagram id="simulation_results_table" name="計算時間・パレート解数一覧">
+        <mxGraphModel dx="1295" dy="465" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="560" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" value="シナリオ別の計算時間とパレート解数" vertex="1">
+                    <mxGeometry height="40" width="900" x="40" y="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="h0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1f3864;strokeColor=#ffffff;fontColor=#ffffff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" value="ID" vertex="1">
+                    <mxGeometry height="48" width="80" x="40" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="h1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1f3864;strokeColor=#ffffff;fontColor=#ffffff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" value="シナリオ" vertex="1">
+                    <mxGeometry height="48" width="280" x="120" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="h2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1f3864;strokeColor=#ffffff;fontColor=#ffffff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" value="時間制約" vertex="1">
+                    <mxGeometry height="48" width="240" x="400" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="h3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1f3864;strokeColor=#ffffff;fontColor=#ffffff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" value="除外歩行辺数" vertex="1">
+                    <mxGeometry height="48" width="180" x="640" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="h4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1f3864;strokeColor=#ffffff;fontColor=#ffffff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" value="計算時間&lt;br&gt;[ms]" vertex="1">
+                    <mxGeometry height="48" width="190" x="820" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="h5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1f3864;strokeColor=#ffffff;fontColor=#ffffff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" value="パレート解数" vertex="1">
+                    <mxGeometry height="48" width="190" x="1010" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="r0c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="SC001" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="r0c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="高齢者が買物にいく場合" vertex="1">
+                    <mxGeometry height="40" width="280" x="120" y="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="r0c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="hard (1800 s)" vertex="1">
+                    <mxGeometry height="40" width="240" x="400" y="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="r0c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="76" vertex="1">
+                    <mxGeometry height="40" width="180" x="640" y="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="r0c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="21.1" vertex="1">
+                    <mxGeometry height="40" width="190" x="820" y="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="r0c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="2" vertex="1">
+                    <mxGeometry height="40" width="190" x="1010" y="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="SC002" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="若者がランニングしたい場合" vertex="1">
+                    <mxGeometry height="40" width="280" x="120" y="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="soft (5400 s)" vertex="1">
+                    <mxGeometry height="40" width="240" x="400" y="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="0" vertex="1">
+                    <mxGeometry height="40" width="180" x="640" y="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="62.0" vertex="1">
+                    <mxGeometry height="40" width="190" x="820" y="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="5" vertex="1">
+                    <mxGeometry height="40" width="190" x="1010" y="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="r2c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="SC003" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="r2c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="会社員が通勤する場合" vertex="1">
+                    <mxGeometry height="40" width="280" x="120" y="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="r2c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="hard (1200 s)" vertex="1">
+                    <mxGeometry height="40" width="240" x="400" y="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="r2c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="12" vertex="1">
+                    <mxGeometry height="40" width="180" x="640" y="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="r2c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="43.6" vertex="1">
+                    <mxGeometry height="40" width="190" x="820" y="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="r2c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="5" vertex="1">
+                    <mxGeometry height="40" width="190" x="1010" y="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="r3c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="SC004" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="248" as="geometry"/>
+                </mxCell>
+                <mxCell id="r3c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="若者が買物にいく場合" vertex="1">
+                    <mxGeometry height="40" width="280" x="120" y="248" as="geometry"/>
+                </mxCell>
+                <mxCell id="r3c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="soft (3600 s)" vertex="1">
+                    <mxGeometry height="40" width="240" x="400" y="248" as="geometry"/>
+                </mxCell>
+                <mxCell id="r3c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="0" vertex="1">
+                    <mxGeometry height="40" width="180" x="640" y="248" as="geometry"/>
+                </mxCell>
+                <mxCell id="r3c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="44.0" vertex="1">
+                    <mxGeometry height="40" width="190" x="820" y="248" as="geometry"/>
+                </mxCell>
+                <mxCell id="r3c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="5" vertex="1">
+                    <mxGeometry height="40" width="190" x="1010" y="248" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="SC005" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="288" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="病院の予約に間に合いたい場合" vertex="1">
+                    <mxGeometry height="40" width="280" x="120" y="288" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="hard (1500 s)" vertex="1">
+                    <mxGeometry height="40" width="240" x="400" y="288" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="44" vertex="1">
+                    <mxGeometry height="40" width="180" x="640" y="288" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="41.9" vertex="1">
+                    <mxGeometry height="40" width="190" x="820" y="288" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="4" vertex="1">
+                    <mxGeometry height="40" width="190" x="1010" y="288" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="SC006" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="328" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="喫茶店で待ち合わせする場合" vertex="1">
+                    <mxGeometry height="40" width="280" x="120" y="328" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="soft (2400 s)" vertex="1">
+                    <mxGeometry height="40" width="240" x="400" y="328" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="34" vertex="1">
+                    <mxGeometry height="40" width="180" x="640" y="328" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="34.7" vertex="1">
+                    <mxGeometry height="40" width="190" x="820" y="328" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="6" vertex="1">
+                    <mxGeometry height="40" width="190" x="1010" y="328" as="geometry"/>
+                </mxCell>
+                <mxCell id="r6c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="SC007" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="368" as="geometry"/>
+                </mxCell>
+                <mxCell id="r6c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="リハビリの為に公園散歩する場合" vertex="1">
+                    <mxGeometry height="40" width="280" x="120" y="368" as="geometry"/>
+                </mxCell>
+                <mxCell id="r6c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="soft (7200 s)" vertex="1">
+                    <mxGeometry height="40" width="240" x="400" y="368" as="geometry"/>
+                </mxCell>
+                <mxCell id="r6c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="0" vertex="1">
+                    <mxGeometry height="40" width="180" x="640" y="368" as="geometry"/>
+                </mxCell>
+                <mxCell id="r6c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="45.7" vertex="1">
+                    <mxGeometry height="40" width="190" x="820" y="368" as="geometry"/>
+                </mxCell>
+                <mxCell id="r6c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="5" vertex="1">
+                    <mxGeometry height="40" width="190" x="1010" y="368" as="geometry"/>
+                </mxCell>
+                <mxCell id="r7c0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="SC008" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="408" as="geometry"/>
+                </mxCell>
+                <mxCell id="r7c1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="到着時間指定なし" vertex="1">
+                    <mxGeometry height="40" width="280" x="120" y="408" as="geometry"/>
+                </mxCell>
+                <mxCell id="r7c2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="none" vertex="1">
+                    <mxGeometry height="40" width="240" x="400" y="408" as="geometry"/>
+                </mxCell>
+                <mxCell id="r7c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="12" vertex="1">
+                    <mxGeometry height="40" width="180" x="640" y="408" as="geometry"/>
+                </mxCell>
+                <mxCell id="r7c4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="41.8" vertex="1">
+                    <mxGeometry height="40" width="190" x="820" y="408" as="geometry"/>
+                </mxCell>
+                <mxCell id="r7c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef3fa;strokeColor=#c9d2e0;fontSize=11;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="6" vertex="1">
+                    <mxGeometry height="40" width="190" x="1010" y="408" as="geometry"/>
+                </mxCell>
+                <mxCell id="sum0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dbe5f1;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;fontColor=#1f3864;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="—" vertex="1">
+                    <mxGeometry height="44" width="80" x="40" y="448" as="geometry"/>
+                </mxCell>
+                <mxCell id="sum1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dbe5f1;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;fontColor=#1f3864;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="平均 / 合計" vertex="1">
+                    <mxGeometry height="44" width="280" x="120" y="448" as="geometry"/>
+                </mxCell>
+                <mxCell id="sum2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dbe5f1;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;fontColor=#1f3864;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="—" vertex="1">
+                    <mxGeometry height="44" width="240" x="400" y="448" as="geometry"/>
+                </mxCell>
+                <mxCell id="sum3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dbe5f1;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;fontColor=#1f3864;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="計 178" vertex="1">
+                    <mxGeometry height="44" width="180" x="640" y="448" as="geometry"/>
+                </mxCell>
+                <mxCell id="sum4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dbe5f1;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;fontColor=#1f3864;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="平均 41.9" vertex="1">
+                    <mxGeometry height="44" width="190" x="820" y="448" as="geometry"/>
+                </mxCell>
+                <mxCell id="sum5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dbe5f1;strokeColor=#c9d2e0;fontSize=11;fontStyle=1;fontColor=#1f3864;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;" value="計 38（平均 4.75）" vertex="1">
+                    <mxGeometry height="44" width="190" x="1010" y="448" as="geometry"/>
+                </mxCell>
+                <mxCell id="note" parent="1" style="text;html=1;fontSize=12;align=left;verticalAlign=middle;fontColor=#333333;" value="注：使用地図 map_sketch_1000m_ext10／OD walk:7 → walk:19／全 8 ケース実行可能（feasible）／計算時間は compute_sec を ms 換算。出典：od_walk7_walk19_simulations.csv" vertex="1">
+                    <mxGeometry height="30" width="1160" x="40" y="504" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
